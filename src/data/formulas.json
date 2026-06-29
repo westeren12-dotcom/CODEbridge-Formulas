@@ -1,0 +1,1281 @@
+{
+  "formulas": [
+    {
+      "id": "complex-numbers-i2",
+      "name": "Imaginary Unit Definition",
+      "equation": "i² = −1",
+      "explanation": "The imaginary unit i is defined as the square root of −1. This lets us take square roots of negative numbers, which is impossible in the real number system. Any complex number has the form a + bi, where a is the real part and b is the imaginary part.",
+      "easyExplanation": "i is just a placeholder for √−1. Whenever you see i², swap it for −1 and simplify.",
+      "satImportance": "Medium",
+      "exampleProblem": "Simplify (3 + 2i)(1 − i).",
+      "stepByStepSolution": [
+        "Distribute: 3(1) + 3(−i) + 2i(1) + 2i(−i)",
+        "= 3 − 3i + 2i − 2i²",
+        "Replace i² with −1: −2i² = −2(−1) = 2",
+        "Combine: 3 + 2 + (−3i + 2i) = 5 − i"
+      ],
+      "commonMistakes": [
+        "Forgetting to replace i² with −1 and leaving it in the answer",
+        "Sign errors when distributing negative imaginary terms",
+        "Treating i like a normal variable instead of applying i² = −1"
+      ],
+      "memoryTrick": "i² = −1, i³ = −i, i⁴ = 1 — it cycles every 4 powers. Think 'i to the 4th is fine (1)'.",
+      "practiceQuestion": "Simplify (4 − i)(2 + 3i).",
+      "difficulty": "Medium",
+      "tags": ["complex numbers", "algebra", "imaginary unit"]
+    },
+    {
+      "id": "function-transformations",
+      "name": "Function Transformation Rules",
+      "equation": "f(x) → f(x − h) + k,  a·f(x),  f(bx)",
+      "explanation": "Transformations shift, stretch, or reflect a graph. h shifts horizontally (opposite sign of what's written), k shifts vertically, a stretches/reflects vertically, and b stretches/reflects horizontally.",
+      "easyExplanation": "Inside the parentheses = horizontal moves (and they're backwards). Outside = vertical moves (normal direction).",
+      "satImportance": "High",
+      "exampleProblem": "If f(x) = x², describe the transformation of g(x) = f(x − 3) + 2.",
+      "stepByStepSolution": [
+        "Compare g(x) = f(x − h) + k to f(x − 3) + 2",
+        "h = 3 → shift right 3 (because it's x minus 3)",
+        "k = 2 → shift up 2",
+        "Result: the parabola shifts right 3 and up 2, vertex moves from (0,0) to (3,2)"
+      ],
+      "commonMistakes": [
+        "Shifting left instead of right when seeing 'x − h' (sign confusion)",
+        "Mixing up which constant affects horizontal vs vertical movement",
+        "Forgetting that a negative 'a' flips the graph vertically"
+      ],
+      "memoryTrick": "'Inside is backwards, outside is forwards' — x − h inside means shift RIGHT even though it looks like subtraction.",
+      "practiceQuestion": "Describe the transformation of g(x) = −f(x + 1) − 4 if f(x) = x².",
+      "difficulty": "Medium",
+      "tags": ["functions", "transformations", "graphing"]
+    },
+    {
+      "id": "rational-expressions",
+      "name": "Simplifying Rational Expressions",
+      "equation": "a/b ÷ c/d = a/b × d/c",
+      "explanation": "To divide rational expressions, multiply by the reciprocal of the divisor, then factor and cancel common terms between numerator and denominator.",
+      "easyExplanation": "Dividing fractions = flip the second one and multiply. Then cancel anything that matches on top and bottom.",
+      "satImportance": "High",
+      "exampleProblem": "Simplify (x² − 4)/(x + 3) ÷ (x − 2)/(x + 3).",
+      "stepByStepSolution": [
+        "Flip and multiply: (x² − 4)/(x + 3) × (x + 3)/(x − 2)",
+        "Factor x² − 4 as (x − 2)(x + 2)",
+        "Expression becomes: (x − 2)(x + 2)/(x + 3) × (x + 3)/(x − 2)",
+        "Cancel (x + 3) and (x − 2): result is (x + 2)"
+      ],
+      "commonMistakes": [
+        "Cancelling terms that are added/subtracted instead of multiplied",
+        "Forgetting to factor before cancelling",
+        "Not stating domain restrictions (x ≠ 2, x ≠ −3)"
+      ],
+      "memoryTrick": "'Dividing fractions? Flip and switch.' Always factor before you cancel — never cancel across a plus or minus sign.",
+      "practiceQuestion": "Simplify (x² − 9)/(x + 5) ÷ (x − 3)/(x + 5).",
+      "difficulty": "Medium",
+      "tags": ["rational expressions", "algebra", "factoring"]
+    },
+    {
+      "id": "radical-equations",
+      "name": "Solving Radical Equations",
+      "equation": "√(f(x)) = g(x)  →  f(x) = [g(x)]²",
+      "explanation": "To solve an equation with a square root, isolate the radical, then square both sides to eliminate it. This can introduce extraneous solutions, so every answer must be checked in the original equation.",
+      "easyExplanation": "Get the square root alone on one side, square both sides to kill the root, solve normally — then always check your answers, since squaring can create fake solutions.",
+      "satImportance": "High",
+      "exampleProblem": "Solve √(2x + 3) = x.",
+      "stepByStepSolution": [
+        "Square both sides: 2x + 3 = x²",
+        "Rearrange: x² − 2x − 3 = 0",
+        "Factor: (x − 3)(x + 1) = 0",
+        "Solutions: x = 3 or x = −1",
+        "Check x = 3: √9 = 3 ✓. Check x = −1: √1 = 1 ≠ −1 ✗ (extraneous)",
+        "Final answer: x = 3"
+      ],
+      "commonMistakes": [
+        "Forgetting to check for extraneous solutions after squaring",
+        "Squaring before isolating the radical",
+        "Sign errors when moving terms during the squaring step"
+      ],
+      "memoryTrick": "'Square it, then scare-check it.' Squaring can lie to you — always verify in the original equation.",
+      "practiceQuestion": "Solve √(3x + 1) = x − 1.",
+      "difficulty": "Hard",
+      "tags": ["radicals", "equations", "extraneous solutions"]
+    },
+    {
+      "id": "exponential-transformations",
+      "name": "Exponential Function Transformations",
+      "equation": "f(x) = a · b^(x − h) + k",
+      "explanation": "In an exponential function, a controls vertical stretch/reflection, b is the growth/decay base (b > 1 growth, 0 < b < 1 decay), h shifts horizontally, and k shifts the horizontal asymptote vertically (the new asymptote is y = k).",
+      "easyExplanation": "Same shifting rules as any function, but exponentials always have a horizontal asymptote — and k tells you where that asymptote moves to.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the horizontal asymptote and y-intercept of f(x) = 2 · 3^x − 5.",
+      "stepByStepSolution": [
+        "Identify k = −5 → horizontal asymptote is y = −5",
+        "Find y-intercept by setting x = 0: f(0) = 2 · 3⁰ − 5",
+        "3⁰ = 1, so f(0) = 2(1) − 5 = −3",
+        "Y-intercept: (0, −3); Asymptote: y = −5"
+      ],
+      "commonMistakes": [
+        "Assuming the asymptote is always y = 0 (it shifts with k)",
+        "Confusing the base b's growth/decay behavior",
+        "Forgetting that a flips the graph if negative"
+      ],
+      "memoryTrick": "'k moves the floor.' Whatever k is, that's where the asymptote line sits.",
+      "practiceQuestion": "Find the horizontal asymptote and y-intercept of f(x) = −4 · 2^x + 6.",
+      "difficulty": "Medium",
+      "tags": ["exponential", "transformations", "asymptotes"]
+    },
+    {
+      "id": "slope-formula",
+      "name": "Slope Formula",
+      "equation": "m = (y₂ − y₁) / (x₂ − x₁)",
+      "explanation": "Slope measures the steepness and direction of a line, calculated as the change in y divided by the change in x between any two points on the line.",
+      "easyExplanation": "Slope = rise over run. Pick any two points, subtract the y's on top, subtract the x's on bottom.",
+      "satImportance": "High",
+      "exampleProblem": "Find the slope of the line through (2, 3) and (6, 11).",
+      "stepByStepSolution": [
+        "Label points: (x₁, y₁) = (2, 3), (x₂, y₂) = (6, 11)",
+        "Apply formula: m = (11 − 3) / (6 − 2)",
+        "m = 8 / 4",
+        "m = 2"
+      ],
+      "commonMistakes": [
+        "Subtracting x's and y's in opposite order (must match: both point 2 minus point 1)",
+        "Mixing up which coordinate is x and which is y",
+        "Dividing by zero when x₁ = x₂ (the line is vertical, slope is undefined)"
+      ],
+      "memoryTrick": "'Rise over run' — y is vertical (rise), x is horizontal (run). Always y on top.",
+      "practiceQuestion": "Find the slope of the line through (−1, 4) and (3, −8).",
+      "difficulty": "Easy",
+      "tags": ["linear equations", "slope", "coordinate geometry"]
+    },
+    {
+      "id": "slope-intercept-form",
+      "name": "Slope-Intercept Form",
+      "equation": "y = mx + b",
+      "explanation": "This is the most common way to write a linear equation, where m is the slope of the line and b is the y-intercept (the point where the line crosses the y-axis, when x = 0).",
+      "easyExplanation": "m tells you how steep the line is, b tells you where it starts on the y-axis.",
+      "satImportance": "High",
+      "exampleProblem": "A line has slope 3 and passes through (0, −5). Write its equation.",
+      "stepByStepSolution": [
+        "Since the point has x = 0, it IS the y-intercept: b = −5",
+        "Plug m and b into y = mx + b",
+        "y = 3x + (−5)",
+        "y = 3x − 5"
+      ],
+      "commonMistakes": [
+        "Confusing which number is the slope and which is the intercept",
+        "Forgetting the sign of b when the y-intercept is negative",
+        "Assuming the y-intercept formula works for points where x ≠ 0 without solving for b first"
+      ],
+      "memoryTrick": "'b is where you Begin' — it's the starting value on the y-axis.",
+      "practiceQuestion": "A line has slope −2 and y-intercept 7. Write its equation, then find y when x = 4.",
+      "difficulty": "Easy",
+      "tags": ["linear equations", "slope-intercept", "graphing"]
+    },
+    {
+      "id": "quadratic-formula",
+      "name": "Quadratic Formula",
+      "equation": "x = (−b ± √(b² − 4ac)) / 2a",
+      "explanation": "For any quadratic equation in the form ax² + bx + c = 0, this formula gives both solutions (roots) directly, even when the equation can't be factored easily.",
+      "easyExplanation": "Plug a, b, and c from your equation into this formula and simplify — it always works, even when factoring doesn't.",
+      "satImportance": "High",
+      "exampleProblem": "Solve 2x² + 3x − 5 = 0.",
+      "stepByStepSolution": [
+        "Identify a = 2, b = 3, c = −5",
+        "Plug into formula: x = (−3 ± √(3² − 4(2)(−5))) / 2(2)",
+        "Simplify inside the root: 9 − (−40) = 49",
+        "x = (−3 ± √49) / 4 = (−3 ± 7) / 4",
+        "Two solutions: x = 4/4 = 1, or x = −10/4 = −2.5"
+      ],
+      "commonMistakes": [
+        "Forgetting the ± sign and only finding one solution",
+        "Sign errors when c is negative inside the discriminant",
+        "Putting only b² instead of −4ac under the root correctly (sign of 4ac matters)"
+      ],
+      "memoryTrick": "Sing it to 'Pop Goes the Weasel': 'x equals negative b, plus or minus the square root, of b squared minus 4ac, all over 2a.'",
+      "practiceQuestion": "Solve 3x² − 2x − 8 = 0 using the quadratic formula.",
+      "difficulty": "Medium",
+      "tags": ["quadratics", "algebra", "roots"]
+    },
+    {
+      "id": "discriminant",
+      "name": "Discriminant",
+      "equation": "Δ = b² − 4ac",
+      "explanation": "The discriminant, the expression under the square root in the quadratic formula, tells you how many real solutions a quadratic equation has without solving it fully. Positive means two real solutions, zero means one repeated solution, negative means no real solutions.",
+      "easyExplanation": "Just calculate b² − 4ac. Positive = 2 answers, zero = 1 answer, negative = no real answers.",
+      "satImportance": "Medium",
+      "exampleProblem": "How many real solutions does x² + 4x + 7 = 0 have?",
+      "stepByStepSolution": [
+        "Identify a = 1, b = 4, c = 7",
+        "Calculate discriminant: 4² − 4(1)(7)",
+        "= 16 − 28",
+        "= −12 (negative)",
+        "Since the discriminant is negative, there are no real solutions"
+      ],
+      "commonMistakes": [
+        "Forgetting to check the sign before concluding number of solutions",
+        "Calculation errors with negative c values",
+        "Confusing 'no real solutions' with 'no solutions' (there are complex ones)"
+      ],
+      "memoryTrick": "'Positive Plenty, Zero Zip-tie, Negative Nothing' — positive gives 2, zero gives 1 (tied together), negative gives none real.",
+      "practiceQuestion": "How many real solutions does 2x² − 4x + 2 = 0 have?",
+      "difficulty": "Medium",
+      "tags": ["quadratics", "discriminant", "roots"]
+    },
+    {
+      "id": "pythagorean-theorem",
+      "name": "Pythagorean Theorem",
+      "equation": "a² + b² = c²",
+      "explanation": "In any right triangle, the sum of the squares of the two legs equals the square of the hypotenuse (the longest side, opposite the right angle).",
+      "easyExplanation": "For right triangles only: square the two short sides, add them, that equals the long side squared.",
+      "satImportance": "High",
+      "exampleProblem": "A right triangle has legs of length 6 and 8. Find the hypotenuse.",
+      "stepByStepSolution": [
+        "Apply formula: 6² + 8² = c²",
+        "36 + 64 = c²",
+        "100 = c²",
+        "c = √100 = 10"
+      ],
+      "commonMistakes": [
+        "Applying this formula to non-right triangles",
+        "Confusing which side is the hypotenuse (it's always opposite the right angle, and the longest side)",
+        "Forgetting to take the square root at the end"
+      ],
+      "memoryTrick": "Classic 3-4-5 triangle: 3² + 4² = 9 + 16 = 25 = 5². Memorize this set as a sanity check.",
+      "practiceQuestion": "A right triangle has a hypotenuse of 13 and one leg of 5. Find the other leg.",
+      "difficulty": "Easy",
+      "tags": ["geometry", "right triangles", "pythagorean theorem"]
+    },
+    {
+      "id": "special-right-triangles",
+      "name": "Special Right Triangles",
+      "equation": "45-45-90: x, x, x√2  |  30-60-90: x, x√3, 2x",
+      "explanation": "These two right triangles appear constantly on the SAT and have fixed side ratios, so you can find every side instantly once you know one. In 45-45-90, the legs are equal and the hypotenuse is leg × √2. In 30-60-90, sides scale as x : x√3 : 2x, opposite their respective angles.",
+      "easyExplanation": "If you see a 45-45-90 or 30-60-90 triangle, don't use the Pythagorean theorem — just plug into these ratios directly to save time.",
+      "satImportance": "High",
+      "exampleProblem": "A 30-60-90 triangle has its shortest side equal to 5. Find the other two sides.",
+      "stepByStepSolution": [
+        "Shortest side (opposite 30°) = x = 5",
+        "Side opposite 60° = x√3 = 5√3",
+        "Hypotenuse (opposite 90°) = 2x = 10",
+        "Sides are 5, 5√3, and 10"
+      ],
+      "commonMistakes": [
+        "Mixing up which side corresponds to which ratio value",
+        "Forgetting the √3 only applies to the 30-60-90 triangle, and √2 only to 45-45-90",
+        "Assuming the hypotenuse is always the largest given number instead of identifying it by the right angle"
+      ],
+      "memoryTrick": "'45-45-90: two twins and a root-2 cousin.' '30-60-90: x, x-root-3, 2x — double the small one for the hypotenuse.'",
+      "practiceQuestion": "A 45-45-90 triangle has a hypotenuse of 8√2. Find the length of each leg.",
+      "difficulty": "Medium",
+      "tags": ["geometry", "right triangles", "special triangles"]
+    },
+    {
+      "id": "circle-area-circumference",
+      "name": "Circle Area & Circumference",
+      "equation": "A = πr²,  C = 2πr",
+      "explanation": "Area measures the space inside a circle, while circumference measures the distance around its edge. Both depend only on the radius r (distance from center to edge).",
+      "easyExplanation": "Area uses r squared, circumference just uses r times 2π. Always start by finding the radius.",
+      "satImportance": "High",
+      "exampleProblem": "A circle has a diameter of 10. Find its area and circumference.",
+      "stepByStepSolution": [
+        "Find radius: r = diameter / 2 = 10 / 2 = 5",
+        "Area: A = π(5)² = 25π",
+        "Circumference: C = 2π(5) = 10π"
+      ],
+      "commonMistakes": [
+        "Using the diameter instead of the radius directly in the formulas",
+        "Forgetting to square the radius for area (common slip: using 2r instead of r²)",
+        "Leaving π unsimplified when the question wants a decimal approximation"
+      ],
+      "memoryTrick": "'Area is Always squared' (r²), circumference is just 'Circle times 2π r'.",
+      "practiceQuestion": "A circle has a circumference of 18π. Find its area.",
+      "difficulty": "Easy",
+      "tags": ["geometry", "circles", "area"]
+    },
+    {
+      "id": "arc-length-sector-area",
+      "name": "Arc Length & Sector Area",
+      "equation": "Arc Length = (θ/360)·2πr,  Sector Area = (θ/360)·πr²",
+      "explanation": "A sector is a 'slice' of a circle defined by a central angle θ (in degrees). Both arc length and sector area scale proportionally to what fraction of the full circle that angle represents.",
+      "easyExplanation": "Find what fraction of the full circle the angle represents (θ/360), then multiply by the full circle's circumference or area.",
+      "satImportance": "Medium",
+      "exampleProblem": "A circle has radius 12. Find the area of a sector with a central angle of 60°.",
+      "stepByStepSolution": [
+        "Fraction of circle: 60/360 = 1/6",
+        "Full circle area: π(12)² = 144π",
+        "Sector area: (1/6)(144π)",
+        "= 24π"
+      ],
+      "commonMistakes": [
+        "Forgetting to convert the angle into a fraction of 360 first",
+        "Using the diameter instead of radius in the area formula",
+        "Mixing up arc length (uses circumference) with sector area (uses area)"
+      ],
+      "memoryTrick": "'Same slice, same fraction' — whatever fraction of 360° your angle is, that's the same fraction of the full circumference or area.",
+      "practiceQuestion": "A circle has radius 9. Find the arc length for a central angle of 120°.",
+      "difficulty": "Medium",
+      "tags": ["geometry", "circles", "arc length", "sectors"]
+    },
+    {
+      "id": "distance-formula",
+      "name": "Distance Formula",
+      "equation": "d = √((x₂ − x₁)² + (y₂ − y₁)²)",
+      "explanation": "This formula finds the straight-line distance between any two points on a coordinate plane. It's actually the Pythagorean theorem in disguise, treating the horizontal and vertical gaps between points as the two legs of a right triangle.",
+      "easyExplanation": "Subtract the x's, subtract the y's, square both, add them, then take the square root.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the distance between (1, 2) and (4, 6).",
+      "stepByStepSolution": [
+        "d = √((4 − 1)² + (6 − 2)²)",
+        "= √(3² + 4²)",
+        "= √(9 + 16)",
+        "= √25 = 5"
+      ],
+      "commonMistakes": [
+        "Forgetting to square the differences before adding them",
+        "Sign errors when subtracting coordinates (squaring removes the sign issue, but order still matters for setup)",
+        "Forgetting the final square root step"
+      ],
+      "memoryTrick": "It's just the Pythagorean theorem with coordinates — the answer is always the hypotenuse of a right triangle formed by the two points.",
+      "practiceQuestion": "Find the distance between (−2, 3) and (2, 0).",
+      "difficulty": "Easy",
+      "tags": ["coordinate geometry", "distance formula"]
+    },
+    {
+      "id": "midpoint-formula",
+      "name": "Midpoint Formula",
+      "equation": "M = ((x₁ + x₂)/2, (y₁ + y₂)/2)",
+      "explanation": "The midpoint formula finds the exact center point between two coordinates by averaging their x-values and averaging their y-values separately.",
+      "easyExplanation": "Average the x's together, average the y's together — that's your midpoint.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the midpoint of the segment connecting (−2, 5) and (6, 1).",
+      "stepByStepSolution": [
+        "Average x-values: (−2 + 6)/2 = 4/2 = 2",
+        "Average y-values: (5 + 1)/2 = 6/2 = 3",
+        "Midpoint: (2, 3)"
+      ],
+      "commonMistakes": [
+        "Adding both coordinates together instead of averaging x's and y's separately",
+        "Forgetting to divide by 2 after adding",
+        "Mixing up x and y values when plugging into the formula"
+      ],
+      "memoryTrick": "'Midpoint is just the average' — same as finding the average of two numbers, done twice (once for x, once for y).",
+      "practiceQuestion": "Find the midpoint of the segment connecting (3, −7) and (−9, 1).",
+      "difficulty": "Easy",
+      "tags": ["coordinate geometry", "midpoint"]
+    },
+    {
+      "id": "exponent-rules",
+      "name": "Exponent Rules",
+      "equation": "aᵘ · aᵛ = aᵘ⁺ᵛ,  aᵘ/aᵛ = aᵘ⁻ᵛ,  (aᵘ)ᵛ = aᵘᵛ",
+      "explanation": "These rules let you simplify expressions with exponents without expanding them. Multiplying same-base powers adds exponents, dividing subtracts them, and raising a power to a power multiplies them.",
+      "easyExplanation": "Same base, multiplying → add the exponents. Same base, dividing → subtract them. Power of a power → multiply them.",
+      "satImportance": "High",
+      "exampleProblem": "Simplify (x³ · x⁵) / x².",
+      "stepByStepSolution": [
+        "Combine numerator first: x³ · x⁵ = x³⁺⁵ = x⁸",
+        "Now divide by x²: x⁸ / x² = x⁸⁻²",
+        "= x⁶"
+      ],
+      "commonMistakes": [
+        "Multiplying exponents instead of adding when multiplying same-base terms",
+        "Applying exponent rules to terms with different bases (rules only work when bases match)",
+        "Forgetting that a negative exponent means 'flip and make positive': a⁻ⁿ = 1/aⁿ"
+      ],
+      "memoryTrick": "'Multiply bases, add powers. Divide bases, subtract powers. Power of a power, multiply straight through.'",
+      "practiceQuestion": "Simplify (y⁴)³ · y².",
+      "difficulty": "Medium",
+      "tags": ["exponents", "algebra"]
+    },
+    {
+      "id": "mean-median",
+      "name": "Mean & Median",
+      "equation": "Mean = (sum of values) / (number of values)",
+      "explanation": "Mean is the average of a data set, found by adding all values and dividing by how many there are. Median is the middle value when data is sorted in order (or the average of the two middle values if there's an even count).",
+      "easyExplanation": "Mean = add everything up, divide by how many numbers there are. Median = sort the numbers, find the middle.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the mean and median of: 4, 8, 2, 10, 6.",
+      "stepByStepSolution": [
+        "Mean: sum = 4+8+2+10+6 = 30, count = 5",
+        "Mean = 30/5 = 6",
+        "Median: sort the data → 2, 4, 6, 8, 10",
+        "Middle value (3rd of 5) = 6"
+      ],
+      "commonMistakes": [
+        "Forgetting to sort the data before finding the median",
+        "Averaging the two middle values when the count is actually odd (only do this for even counts)",
+        "Dividing by the wrong count (e.g., one less than the actual number of values)"
+      ],
+      "memoryTrick": "'Mean needs a calculator, median needs an order.' Mean = math, median = middle.",
+      "practiceQuestion": "Find the mean and median of: 3, 7, 7, 9, 12, 14.",
+      "difficulty": "Easy",
+      "tags": ["statistics", "mean", "median"]
+    },
+    {
+      "id": "probability-basic",
+      "name": "Basic Probability",
+      "equation": "P(event) = (favorable outcomes) / (total outcomes)",
+      "explanation": "Probability measures the likelihood of a specific event happening, expressed as a fraction, decimal, or percentage between 0 (impossible) and 1 (certain).",
+      "easyExplanation": "Count what you want, count everything possible, divide the first by the second.",
+      "satImportance": "Medium",
+      "exampleProblem": "A bag has 4 red, 3 blue, and 5 green marbles. What is the probability of picking a blue marble?",
+      "stepByStepSolution": [
+        "Favorable outcomes (blue marbles) = 3",
+        "Total outcomes (all marbles) = 4 + 3 + 5 = 12",
+        "P(blue) = 3/12",
+        "= 1/4"
+      ],
+      "commonMistakes": [
+        "Forgetting to include all categories in the total count",
+        "Not simplifying the final fraction",
+        "Confusing 'and' (multiply probabilities) with 'or' (add probabilities) in multi-event problems"
+      ],
+      "memoryTrick": "'Probability is just a part-to-whole fraction' — same setup as any fraction-of-a-group problem.",
+      "practiceQuestion": "A deck has 12 number cards and 8 letter cards. What is the probability of drawing a letter card?",
+      "difficulty": "Easy",
+      "tags": ["statistics", "probability"]
+    },
+    {
+      "id": "arithmetic-sequence",
+      "name": "Arithmetic Sequence Formula",
+      "equation": "aₙ = a₁ + (n − 1)d",
+      "explanation": "An arithmetic sequence increases or decreases by the same fixed amount (d, the common difference) each term. This formula finds any term directly without listing every term before it.",
+      "easyExplanation": "Start with the first term, then add the common difference one less time than the term number you want.",
+      "satImportance": "Medium",
+      "exampleProblem": "An arithmetic sequence starts at 5 and has a common difference of 4. Find the 10th term.",
+      "stepByStepSolution": [
+        "Identify a₁ = 5, d = 4, n = 10",
+        "Apply formula: a₁₀ = 5 + (10 − 1)(4)",
+        "= 5 + (9)(4)",
+        "= 5 + 36 = 41"
+      ],
+      "commonMistakes": [
+        "Using n instead of (n − 1), which adds one extra step of the difference",
+        "Mixing up which value is a₁ (first term) versus aₙ (the term you're solving for)",
+        "Sign errors when the common difference is negative (decreasing sequence)"
+      ],
+      "memoryTrick": "'One less hop' — to get to term n, you only take (n − 1) steps from the start, not n steps.",
+      "practiceQuestion": "An arithmetic sequence starts at 12 with a common difference of −3. Find the 8th term.",
+      "difficulty": "Medium",
+      "tags": ["sequences", "arithmetic sequence", "algebra"]
+    },
+    {
+      "id": "systems-of-equations",
+      "name": "Solving Systems of Equations (Substitution)",
+      "equation": "If y = f(x) and y = g(x), then f(x) = g(x)",
+      "explanation": "When two equations both equal y (or any shared variable), you can set their expressions equal to each other to eliminate that variable and solve for the remaining one. Substitute the result back to find the other variable.",
+      "easyExplanation": "If both equations tell you what y equals, just set those two things equal to each other and solve for x first.",
+      "satImportance": "High",
+      "exampleProblem": "Solve the system: y = 2x + 3 and y = −x + 9.",
+      "stepByStepSolution": [
+        "Set the two expressions for y equal: 2x + 3 = −x + 9",
+        "Add x to both sides: 3x + 3 = 9",
+        "Subtract 3: 3x = 6",
+        "Divide by 3: x = 2",
+        "Substitute back: y = 2(2) + 3 = 7. Solution: (2, 7)"
+      ],
+      "commonMistakes": [
+        "Forgetting to substitute the found value back in to get the second variable",
+        "Sign errors when moving terms across the equals sign",
+        "Solving only one equation and assuming that's the full solution"
+      ],
+      "memoryTrick": "'Same y, same fight' — if two things equal the same y, they must equal each other.",
+      "practiceQuestion": "Solve the system: y = 3x − 4 and y = x + 6.",
+      "difficulty": "Medium",
+      "tags": ["systems of equations", "algebra", "substitution"]
+    },
+    {
+      "id": "point-slope-form",
+      "name": "Point-Slope Form",
+      "equation": "y − y₁ = m(x − x₁)",
+      "explanation": "This form writes a line's equation using its slope m and any single known point (x₁, y₁) on the line, without needing the y-intercept.",
+      "easyExplanation": "If you know the slope and one point, plug them straight in — no solving required to get started.",
+      "satImportance": "High",
+      "exampleProblem": "Write the equation of a line with slope 4 passing through (2, 5).",
+      "stepByStepSolution": [
+        "Plug into y − y₁ = m(x − x₁): y − 5 = 4(x − 2)",
+        "Distribute: y − 5 = 4x − 8",
+        "Add 5 to both sides: y = 4x − 3"
+      ],
+      "commonMistakes": [
+        "Forgetting to distribute the slope across both terms in the parentheses",
+        "Mixing up x₁ and y₁ when substituting the point",
+        "Sign errors when the point has negative coordinates"
+      ],
+      "memoryTrick": "'y minus, x minus' — both subtractions use the same point's coordinates.",
+      "practiceQuestion": "Write the equation of a line with slope −2 passing through (−1, 6), then convert it to slope-intercept form.",
+      "difficulty": "Easy",
+      "tags": ["linear equations", "point-slope form", "algebra"]
+    },
+    {
+      "id": "standard-form-linear",
+      "name": "Standard Form of a Line",
+      "equation": "Ax + By = C",
+      "explanation": "Standard form writes a linear equation with x and y terms on one side and a constant on the other. It's especially useful for quickly finding intercepts: set x = 0 to find the y-intercept, set y = 0 to find the x-intercept.",
+      "easyExplanation": "Both variables on one side, a plain number on the other. Great for finding where a line crosses the axes fast.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the x- and y-intercepts of 3x + 4y = 12.",
+      "stepByStepSolution": [
+        "Find x-intercept: set y = 0 → 3x = 12 → x = 4. Point: (4, 0)",
+        "Find y-intercept: set x = 0 → 4y = 12 → y = 3. Point: (0, 3)"
+      ],
+      "commonMistakes": [
+        "Forgetting to set the OTHER variable to zero (setting x = 0 to find the x-intercept instead of y)",
+        "Not dividing fully to isolate the remaining variable",
+        "Confusing standard form with slope-intercept form when asked to identify the slope (slope = −A/B here)"
+      ],
+      "memoryTrick": "'Zero out the one you don't want' — to find where a line crosses an axis, kill off the other variable.",
+      "practiceQuestion": "Find the x- and y-intercepts of 5x − 2y = 20.",
+      "difficulty": "Easy",
+      "tags": ["linear equations", "standard form", "intercepts"]
+    },
+    {
+      "id": "average-rate-of-change",
+      "name": "Average Rate of Change",
+      "equation": "ARC = (f(b) − f(a)) / (b − a)",
+      "explanation": "This measures how much a function's output changes on average per unit of input over an interval [a, b]. It's the slope of the secant line connecting the two endpoints of the function on that interval.",
+      "easyExplanation": "It's just the slope formula, but using function outputs instead of plain y-values.",
+      "satImportance": "Medium",
+      "exampleProblem": "For f(x) = x² + 1, find the average rate of change from x = 1 to x = 4.",
+      "stepByStepSolution": [
+        "Find f(1) = 1² + 1 = 2",
+        "Find f(4) = 4² + 1 = 17",
+        "Apply formula: ARC = (17 − 2) / (4 − 1)",
+        "= 15 / 3 = 5"
+      ],
+      "commonMistakes": [
+        "Plugging in x-values directly instead of evaluating f(a) and f(b) first",
+        "Subtracting in the wrong order (must match: f(b) − f(a) over b − a, not mixed)",
+        "Forgetting this is just the slope formula applied to function values"
+      ],
+      "memoryTrick": "'Slope formula in disguise' — same structure as m = (y₂−y₁)/(x₂−x₁), but y becomes f(x).",
+      "practiceQuestion": "For f(x) = 2x² − 3, find the average rate of change from x = 0 to x = 3.",
+      "difficulty": "Medium",
+      "tags": ["functions", "rate of change", "algebra"]
+    },
+    {
+      "id": "absolute-value",
+      "name": "Absolute Value",
+      "equation": "|x| = x if x ≥ 0,  |x| = −x if x < 0",
+      "explanation": "Absolute value represents distance from zero on a number line, so it's always non-negative. When solving equations with absolute value, you must split into two cases: one where the inside is positive, one where it's negative.",
+      "easyExplanation": "Absolute value strips the sign — the answer is always positive or zero. When solving |something| = number, split into two equations.",
+      "satImportance": "Medium",
+      "exampleProblem": "Solve |2x − 3| = 7.",
+      "stepByStepSolution": [
+        "Split into two cases: 2x − 3 = 7 OR 2x − 3 = −7",
+        "Case 1: 2x = 10 → x = 5",
+        "Case 2: 2x = −4 → x = −2",
+        "Solutions: x = 5 or x = −2"
+      ],
+      "commonMistakes": [
+        "Solving only one case and missing the second solution",
+        "Forgetting to flip the sign of the entire right side, not just part of it, in the negative case",
+        "Assuming |x| = −5 has a solution (absolute value can never equal a negative number)"
+      ],
+      "memoryTrick": "'Two roads from one absolute value' — always branch into a positive case and a negative case.",
+      "practiceQuestion": "Solve |3x + 1| = 10.",
+      "difficulty": "Medium",
+      "tags": ["absolute value", "algebra", "equations"]
+    },
+    {
+      "id": "function-composition",
+      "name": "Function Composition",
+      "equation": "(f ∘ g)(x) = f(g(x))",
+      "explanation": "Composition means plugging one entire function into another. You evaluate the inner function first, then use that result as the input for the outer function.",
+      "easyExplanation": "Work from the inside out — solve g(x) first, then plug that answer into f.",
+      "satImportance": "Medium",
+      "exampleProblem": "If f(x) = 2x + 1 and g(x) = x², find (f ∘ g)(3).",
+      "stepByStepSolution": [
+        "Evaluate inner function first: g(3) = 3² = 9",
+        "Plug that result into f: f(9) = 2(9) + 1",
+        "= 18 + 1 = 19"
+      ],
+      "commonMistakes": [
+        "Evaluating f first instead of g (order matters — work right to left, inside out)",
+        "Multiplying f(x) and g(x) together instead of substituting one into the other",
+        "Forgetting to fully simplify the inner function before plugging into the outer one"
+      ],
+      "memoryTrick": "'Inside out, like an onion' — always peel the innermost function first.",
+      "practiceQuestion": "If f(x) = x − 4 and g(x) = 3x + 2, find (g ∘ f)(5).",
+      "difficulty": "Medium",
+      "tags": ["functions", "composition", "algebra"]
+    },
+    {
+      "id": "inverse-function",
+      "name": "Inverse Function",
+      "equation": "f⁻¹(x): swap x and y, then solve for y",
+      "explanation": "An inverse function reverses the action of the original function — if f takes a to b, f⁻¹ takes b back to a. To find it algebraically, replace f(x) with y, swap x and y, and solve the new equation for y.",
+      "easyExplanation": "Switch x and y in the equation, then solve for the new y. That new equation is the inverse.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the inverse of f(x) = 3x − 6.",
+      "stepByStepSolution": [
+        "Rewrite as y = 3x − 6",
+        "Swap x and y: x = 3y − 6",
+        "Add 6: x + 6 = 3y",
+        "Divide by 3: y = (x + 6)/3, so f⁻¹(x) = (x + 6)/3"
+      ],
+      "commonMistakes": [
+        "Forgetting to swap x and y before solving (just rearranging the original equation isn't enough)",
+        "Sign errors when isolating the new y",
+        "Confusing f⁻¹(x) with 1/f(x) — they are NOT the same thing"
+      ],
+      "memoryTrick": "'Swap, then solve' — that two-step process is the entire method.",
+      "practiceQuestion": "Find the inverse of f(x) = 2x + 8.",
+      "difficulty": "Medium",
+      "tags": ["functions", "inverse functions", "algebra"]
+    },
+    {
+      "id": "exponential-growth",
+      "name": "Exponential Growth",
+      "equation": "y = a(1 + r)ᵗ",
+      "explanation": "This models quantities that increase by a fixed percentage rate r over repeated time periods t, starting from an initial amount a. Growth means r is added (making the base greater than 1), so the quantity increases.",
+      "easyExplanation": "Start with a, grow by rate r each time period, repeated t times. The base (1 + r) is always bigger than 1 for growth.",
+      "satImportance": "Medium",
+      "exampleProblem": "A population of 500 grows by 8% per year. Find the population after 5 years.",
+      "stepByStepSolution": [
+        "Identify a = 500, r = 0.08, t = 5",
+        "Plug in: y = 500(1 + 0.08)⁵",
+        "= 500(1.08)⁵",
+        "≈ 500(1.4693) ≈ 734.6, so about 735"
+      ],
+      "commonMistakes": [
+        "Forgetting to convert the percentage rate to a decimal before adding to 1",
+        "Using r alone instead of (1 + r) as the base",
+        "Mixing up t (number of time periods) with the growth rate itself"
+      ],
+      "memoryTrick": "'Growth adds, decay subtracts' inside the parentheses — (1 + r) goes up.",
+      "practiceQuestion": "An investment of $2,000 grows by 5% per year. Find its value after 3 years.",
+      "difficulty": "Medium",
+      "tags": ["exponential functions", "growth", "modeling"]
+    },
+    {
+      "id": "exponential-decay",
+      "name": "Exponential Decay",
+      "equation": "y = a(1 − r)ᵗ",
+      "explanation": "This models quantities that decrease by a fixed percentage rate r over repeated time periods, starting from an initial amount a. Decay means r is subtracted (making the base less than 1), so the quantity shrinks over time.",
+      "easyExplanation": "Same structure as growth, but you subtract the rate instead of adding it — the base ends up smaller than 1.",
+      "satImportance": "Medium",
+      "exampleProblem": "A car worth $20,000 depreciates by 12% per year. Find its value after 4 years.",
+      "stepByStepSolution": [
+        "Identify a = 20000, r = 0.12, t = 4",
+        "Plug in: y = 20000(1 − 0.12)⁴",
+        "= 20000(0.88)⁴",
+        "≈ 20000(0.5997) ≈ $11,994"
+      ],
+      "commonMistakes": [
+        "Adding the rate instead of subtracting it (that would be growth, not decay)",
+        "Forgetting to convert percentage to decimal form first",
+        "Rounding too early in the calculation, causing an inaccurate final answer"
+      ],
+      "memoryTrick": "'Decay drains the base below 1' — (1 − r) is always less than 1 for shrinking quantities.",
+      "practiceQuestion": "A radioactive sample of 80g decays by 15% per hour. Find the remaining amount after 6 hours.",
+      "difficulty": "Medium",
+      "tags": ["exponential functions", "decay", "modeling"]
+    },
+    {
+      "id": "vertex-form-and-axis-of-symmetry",
+      "name": "Vertex Form & Axis of Symmetry",
+      "equation": "y = a(x − h)² + k,  axis of symmetry: x = h  (equivalently x = −b/2a in standard form)",
+      "explanation": "Vertex form directly shows a parabola's vertex (h, k) — its highest or lowest point — without needing extra calculation. The axis of symmetry is the vertical line x = h that splits the parabola into two mirror-image halves and always passes through the vertex.",
+      "easyExplanation": "In y = a(x − h)² + k, the vertex is just (h, k) — but watch the sign, since it's x MINUS h. The axis of symmetry is simply x = h.",
+      "satImportance": "High",
+      "exampleProblem": "Find the vertex and axis of symmetry of y = 2(x − 3)² + 5.",
+      "stepByStepSolution": [
+        "Compare to y = a(x − h)² + k: h = 3, k = 5",
+        "Vertex = (3, 5)",
+        "Axis of symmetry: x = 3"
+      ],
+      "commonMistakes": [
+        "Reading h with the wrong sign (if the equation shows x + 3, then h = −3, not 3)",
+        "Confusing the vertex's x-coordinate with the y-coordinate",
+        "Forgetting that a parabola from standard form needs x = −b/2a calculated first if not already in vertex form"
+      ],
+      "memoryTrick": "'h hides its sign' — always flip the sign of the number being subtracted from x to get h.",
+      "practiceQuestion": "Find the vertex and axis of symmetry of y = −(x + 4)² − 1.",
+      "difficulty": "Medium",
+      "tags": ["quadratics", "vertex form", "axis of symmetry", "parabolas"]
+    },
+    {
+      "id": "difference-of-squares",
+      "name": "Difference of Squares",
+      "equation": "a² − b² = (a − b)(a + b)",
+      "explanation": "This factoring pattern applies whenever you have one perfect square subtracted from another. It instantly factors into two binomials: one with subtraction, one with addition, using the square roots of each term.",
+      "easyExplanation": "Spot two perfect squares separated by a minus sign? Take their square roots, then write (root − root)(root + root).",
+      "satImportance": "Medium",
+      "exampleProblem": "Factor x² − 49.",
+      "stepByStepSolution": [
+        "Recognize both terms as perfect squares: x² and 49 = 7²",
+        "Apply the pattern: (x − 7)(x + 7)"
+      ],
+      "commonMistakes": [
+        "Trying to apply this pattern to a sum of squares (a² + b² does NOT factor this way over real numbers)",
+        "Forgetting to take the square root of the coefficient as well as the variable, when both are present",
+        "Sign errors when one of the terms is already negative"
+      ],
+      "memoryTrick": "'Squares minus squares, split the difference' — one factor subtracts, one adds.",
+      "practiceQuestion": "Factor 9x² − 25.",
+      "difficulty": "Easy",
+      "tags": ["polynomials", "factoring", "difference of squares"]
+    },
+    {
+      "id": "perfect-square-trinomials",
+      "name": "Perfect Square Trinomials",
+      "equation": "a² + 2ab + b² = (a + b)²,   a² − 2ab + b² = (a − b)²",
+      "explanation": "A perfect square trinomial is the expanded form of a binomial squared. You can recognize one by checking if the first and last terms are perfect squares and the middle term equals twice the product of their roots.",
+      "easyExplanation": "If the first and last terms are perfect squares and the middle term is exactly double their square roots multiplied together, it factors into a squared binomial.",
+      "satImportance": "Medium",
+      "exampleProblem": "Factor x² + 10x + 25.",
+      "stepByStepSolution": [
+        "Check first and last terms: x² and 25 = 5² are both perfect squares",
+        "Check middle term: 2(x)(5) = 10x — matches!",
+        "Factor as (x + 5)²"
+      ],
+      "commonMistakes": [
+        "Assuming any trinomial with squares on the ends is a perfect square (must verify the middle term matches 2ab exactly)",
+        "Getting the sign wrong on the binomial (negative middle term means a minus sign inside the parentheses)",
+        "Forgetting to check this pattern before jumping to the quadratic formula, which wastes time"
+      ],
+      "memoryTrick": "'Double-check the middle' — the middle term must equal exactly twice the product of the two square roots.",
+      "practiceQuestion": "Factor x² − 14x + 49.",
+      "difficulty": "Medium",
+      "tags": ["polynomials", "factoring", "perfect square trinomial"]
+    },
+    {
+      "id": "remainder-theorem",
+      "name": "Remainder Theorem",
+      "equation": "If p(x) is divided by (x − c), the remainder equals p(c)",
+      "explanation": "Instead of doing long division to find a remainder, you can simply evaluate the polynomial at x = c. Whatever value you get is exactly the remainder of that division.",
+      "easyExplanation": "Skip the division entirely — just plug c into the polynomial. That number IS the remainder.",
+      "satImportance": "Low",
+      "exampleProblem": "Find the remainder when p(x) = x³ − 4x² + 2x − 1 is divided by (x − 3).",
+      "stepByStepSolution": [
+        "Identify c = 3 (since dividing by x − 3)",
+        "Evaluate p(3): 3³ − 4(3)² + 2(3) − 1",
+        "= 27 − 36 + 6 − 1",
+        "= −4 (the remainder)"
+      ],
+      "commonMistakes": [
+        "Using c = −3 instead of c = 3 when dividing by (x − 3) — the sign flips",
+        "Attempting long division instead of the much faster direct substitution",
+        "Arithmetic slip-ups when evaluating higher powers"
+      ],
+      "memoryTrick": "'Divide by (x − c)? Just plug in c.' No division required at all.",
+      "practiceQuestion": "Find the remainder when p(x) = 2x³ + x² − 5x + 3 is divided by (x + 1).",
+      "difficulty": "Medium",
+      "tags": ["polynomials", "remainder theorem"]
+    },
+    {
+      "id": "factor-theorem",
+      "name": "Factor Theorem",
+      "equation": "(x − c) is a factor of p(x) if and only if p(c) = 0",
+      "explanation": "This is a direct extension of the Remainder Theorem: if plugging c into the polynomial gives zero, then (x − c) divides evenly into it with no remainder, meaning it's a true factor.",
+      "easyExplanation": "Plug in a number — if you get exactly 0, that number's matching (x − c) is a factor.",
+      "satImportance": "Low",
+      "exampleProblem": "Is (x − 2) a factor of p(x) = x³ − 3x² − 4x + 12?",
+      "stepByStepSolution": [
+        "Evaluate p(2): 2³ − 3(2)² − 4(2) + 12",
+        "= 8 − 12 − 8 + 12",
+        "= 0",
+        "Since p(2) = 0, (x − 2) IS a factor"
+      ],
+      "commonMistakes": [
+        "Forgetting that the result must be exactly zero, not just small or close to zero",
+        "Mixing up the sign of c (testing x = −2 instead of x = 2 for a factor of (x − 2))",
+        "Stopping after finding one factor when the question asks for full factorization"
+      ],
+      "memoryTrick": "'Zero means yes' — if substitution gives zero, the factor checks out.",
+      "practiceQuestion": "Is (x + 3) a factor of p(x) = x³ + 2x² − 5x − 6?",
+      "difficulty": "Medium",
+      "tags": ["polynomials", "factor theorem"]
+    },
+    {
+      "id": "sum-and-product-of-roots",
+      "name": "Sum & Product of Roots",
+      "equation": "Sum of roots = −b/a,   Product of roots = c/a",
+      "explanation": "For any quadratic ax² + bx + c = 0, you can find the sum and product of its two solutions directly from the coefficients, without ever solving the equation.",
+      "easyExplanation": "No need to solve the whole quadratic — sum of the two answers is just −b/a, and their product is just c/a.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the sum and product of the roots of 2x² − 6x + 4 = 0.",
+      "stepByStepSolution": [
+        "Identify a = 2, b = −6, c = 4",
+        "Sum of roots: −b/a = −(−6)/2 = 6/2 = 3",
+        "Product of roots: c/a = 4/2 = 2"
+      ],
+      "commonMistakes": [
+        "Forgetting the negative sign in front of b for the sum formula",
+        "Mixing up which formula uses b and which uses c",
+        "Trying to apply this to equations not in standard ax² + bx + c = 0 form first"
+      ],
+      "memoryTrick": "'Sum is sour (negative b), product is plain (just c over a)' — sum always flips the sign of b.",
+      "practiceQuestion": "Find the sum and product of the roots of 3x² + 9x − 12 = 0.",
+      "difficulty": "Medium",
+      "tags": ["quadratics", "polynomials", "roots"]
+    },
+    {
+      "id": "circle-equation",
+      "name": "Equation of a Circle",
+      "equation": "(x − h)² + (y − k)² = r²",
+      "explanation": "This standard form gives every point on a circle with center (h, k) and radius r. It comes directly from the distance formula — every point on the circle is exactly r away from the center.",
+      "easyExplanation": "Center is (h, k), but read the signs carefully — they're flipped inside the parentheses. The number on the right is r², not r.",
+      "satImportance": "Medium",
+      "exampleProblem": "Find the center and radius of (x − 2)² + (y + 5)² = 36.",
+      "stepByStepSolution": [
+        "Compare to (x − h)² + (y − k)² = r²: h = 2, k = −5 (sign flips for the +5)",
+        "Center = (2, −5)",
+        "r² = 36, so r = 6"
+      ],
+      "commonMistakes": [
+        "Forgetting to flip the sign when reading h and k from the equation",
+        "Reporting r² as the radius instead of taking the square root",
+        "Mixing up which number is the x-coordinate and which is the y-coordinate of the center"
+      ],
+      "memoryTrick": "'Flip the sign, root the right side' — center signs flip, and always square-root the number on the right.",
+      "practiceQuestion": "Find the center and radius of (x + 1)² + (y − 4)² = 49.",
+      "difficulty": "Medium",
+      "tags": ["coordinate geometry", "circles", "conic sections"]
+    },
+    {
+      "id": "polygon-area-formulas",
+      "name": "Rectangle, Square & Parallelogram Area",
+      "equation": "Rectangle: A = lw,   Square: A = s²,   Parallelogram: A = bh",
+      "explanation": "These shapes all use a base-times-height style formula. A rectangle multiplies length and width, a square is the special case where both sides are equal, and a parallelogram uses its base and the perpendicular height between the parallel sides (not the slanted side length).",
+      "easyExplanation": "Rectangle: multiply the two sides. Square: just square one side. Parallelogram: base times the straight-up height, not the slanted side.",
+      "satImportance": "Medium",
+      "exampleProblem": "A parallelogram has a base of 10 and a height of 6. Find its area.",
+      "stepByStepSolution": [
+        "Apply formula: A = bh",
+        "A = (10)(6)",
+        "= 60"
+      ],
+      "commonMistakes": [
+        "Using the slanted side length of a parallelogram instead of the perpendicular height",
+        "Confusing perimeter formulas with area formulas",
+        "Forgetting a square's area formula is just a special case of the rectangle formula where l = w"
+      ],
+      "memoryTrick": "'Straight up, not slanted' — parallelogram height must be perpendicular to the base.",
+      "practiceQuestion": "A rectangle has a length of 14 and a width of 5. Find its area, then find the area of a square with the same perimeter.",
+      "difficulty": "Easy",
+      "tags": ["geometry", "area", "quadrilaterals"]
+    },
+    {
+      "id": "triangle-area",
+      "name": "Triangle Area",
+      "equation": "A = ½bh",
+      "explanation": "A triangle's area is exactly half of a rectangle with the same base and height, since any triangle can be thought of as half of a parallelogram. The height must be measured perpendicular to the base.",
+      "easyExplanation": "Multiply base times height, then cut the answer in half.",
+      "satImportance": "High",
+      "exampleProblem": "A triangle has a base of 12 and a height of 7. Find its area.",
+      "stepByStepSolution": [
+        "Apply formula: A = ½(12)(7)",
+        "= ½(84)",
+        "= 42"
+      ],
+      "commonMistakes": [
+        "Forgetting to multiply by ½ at the end",
+        "Using a slanted side as the height instead of the true perpendicular height",
+        "Mixing up which given side is the base versus the height when both are provided"
+      ],
+      "memoryTrick": "'Half of a rectangle' — a triangle is always half the area of the rectangle that boxes it in.",
+      "practiceQuestion": "A triangle has a base of 9 and a height of 14. Find its area.",
+      "difficulty": "Easy",
+      "tags": ["geometry", "area", "triangles"]
+    },
+    {
+      "id": "trapezoid-area",
+      "name": "Trapezoid Area",
+      "equation": "A = ½(b₁ + b₂)h",
+      "explanation": "A trapezoid has two parallel sides of different lengths (the bases). Its area is found by averaging those two base lengths, then multiplying by the height (the perpendicular distance between the bases).",
+      "easyExplanation": "Add the two parallel sides, cut that sum in half, then multiply by the height.",
+      "satImportance": "Medium",
+      "exampleProblem": "A trapezoid has parallel sides of 8 and 14, with a height of 5. Find its area.",
+      "stepByStepSolution": [
+        "Apply formula: A = ½(8 + 14)(5)",
+        "= ½(22)(5)",
+        "= ½(110)",
+        "= 55"
+      ],
+      "commonMistakes": [
+        "Forgetting to add both bases before multiplying by height",
+        "Using a non-parallel slanted side as one of the bases",
+        "Forgetting the ½ factor at the front of the formula"
+      ],
+      "memoryTrick": "'Average the bases, then multiply by height' — it's just the average-base rectangle.",
+      "practiceQuestion": "A trapezoid has parallel sides of 6 and 10, with a height of 4. Find its area.",
+      "difficulty": "Medium",
+      "tags": ["geometry", "area", "trapezoid"]
+    },
+    {
+      "id": "rectangular-prism-and-cube-volume",
+      "name": "Rectangular Prism & Cube Volume",
+      "equation": "Rectangular Prism: V = lwh,   Cube: V = s³",
+      "explanation": "A rectangular prism's volume is found by multiplying its three dimensions together. A cube is the special case where all three dimensions are equal, so its volume is simply the side length cubed.",
+      "easyExplanation": "Multiply length, width, and height together. For a cube, just cube one side since they're all the same.",
+      "satImportance": "Medium",
+      "exampleProblem": "A rectangular prism has length 5, width 3, and height 4. Find its volume.",
+      "stepByStepSolution": [
+        "Apply formula: V = lwh",
+        "V = (5)(3)(4)",
+        "= 60"
+      ],
+      "commonMistakes": [
+        "Multiplying only two dimensions instead of all three",
+        "Confusing surface area formulas with volume formulas",
+        "Forgetting units should be cubed (e.g., cm³) for volume, not squared"
+      ],
+      "memoryTrick": "'Three dimensions, three multiplications' — length times width times height, no shortcuts.",
+      "practiceQuestion": "A cube has a side length of 6. Find its volume.",
+      "difficulty": "Easy",
+      "tags": ["geometry", "volume", "3D shapes"]
+    },
+    {
+      "id": "cylinder-volume",
+      "name": "Cylinder Volume",
+      "equation": "V = πr²h",
+      "explanation": "A cylinder's volume is found by multiplying the area of its circular base (πr²) by its height, since a cylinder is essentially a stack of identical circles.",
+      "easyExplanation": "Find the area of the circular base first, then multiply by how tall the cylinder is.",
+      "satImportance": "Medium",
+      "exampleProblem": "A cylinder has a radius of 4 and a height of 10. Find its volume.",
+      "stepByStepSolution": [
+        "Apply formula: V = π(4)²(10)",
+        "= π(16)(10)",
+        "= 160π"
+      ],
+      "commonMistakes": [
+        "Using diameter instead of radius in the formula",
+        "Forgetting to square the radius before multiplying by height",
+        "Confusing cylinder volume with cone volume (cone needs an extra ⅓ factor)"
+      ],
+      "memoryTrick": "'Circle area times height' — it's just the circle formula stacked up.",
+      "practiceQuestion": "A cylinder has a diameter of 6 and a height of 9. Find its volume.",
+      "difficulty": "Medium",
+      "tags": ["geometry", "volume", "cylinder"]
+    },
+    {
+      "id": "cone-volume",
+      "name": "Cone Volume",
+      "equation": "V = (1/3)πr²h",
+      "explanation": "A cone's volume is exactly one-third of a cylinder with the same radius and height, since the cone tapers to a point instead of staying at full width the whole way up.",
+      "easyExplanation": "Calculate it like a cylinder, then divide by 3.",
+      "satImportance": "Medium",
+      "exampleProblem": "A cone has a radius of 3 and a height of 9. Find its volume.",
+      "stepByStepSolution": [
+        "Apply formula: V = (1/3)π(3)²(9)",
+        "= (1/3)π(9)(9)",
+        "= (1/3)π(81)",
+        "= 27π"
+      ],
+      "commonMistakes": [
+        "Forgetting the ⅓ factor entirely (calculating it like a cylinder)",
+        "Using slant height instead of the actual perpendicular height",
+        "Forgetting to square the radius before multiplying"
+      ],
+      "memoryTrick": "'A cone is a third of its cylinder twin' — same r and h, just shrink to ⅓.",
+      "practiceQuestion": "A cone has a radius of 6 and a height of 5. Find its volume.",
+      "difficulty": "Medium",
+      "tags": ["geometry", "volume", "cone"]
+    },
+    {
+      "id": "sphere-volume-and-surface-area",
+      "name": "Sphere Volume & Surface Area",
+      "equation": "V = (4/3)πr³,   Surface Area = 4πr²",
+      "explanation": "A sphere's volume and surface area both depend only on its radius. Volume scales with r³ since it's a 3D measurement, while surface area scales with r² since it's a 2D measurement of the outer shell.",
+      "easyExplanation": "Volume: four-thirds pi r-cubed. Surface area: four pi r-squared. Both just need the radius.",
+      "satImportance": "Medium",
+      "exampleProblem": "A sphere has a radius of 6. Find its volume and surface area.",
+      "stepByStepSolution": [
+        "Volume: V = (4/3)π(6)³ = (4/3)π(216) = 288π",
+        "Surface Area: SA = 4π(6)² = 4π(36) = 144π"
+      ],
+      "commonMistakes": [
+        "Using r² in the volume formula instead of r³ (volume is 3-dimensional)",
+        "Using r³ in the surface area formula instead of r² (surface area is 2-dimensional)",
+        "Forgetting the 4/3 fraction in the volume formula"
+      ],
+      "memoryTrick": "'Volume cubes, surface squares' — match the power to the dimension being measured.",
+      "practiceQuestion": "A sphere has a radius of 9. Find its volume and surface area.",
+      "difficulty": "Medium",
+      "tags": ["geometry", "volume", "surface area", "sphere"]
+    },
+    {
+      "id": "basic-trig-ratios",
+      "name": "Basic Trig Ratios (SOHCAHTOA)",
+      "equation": "sin θ = opposite/hypotenuse,  cos θ = adjacent/hypotenuse,  tan θ = opposite/adjacent",
+      "explanation": "These ratios relate an angle in a right triangle to the lengths of its sides. 'Opposite' and 'adjacent' are defined relative to the angle θ being used, while the hypotenuse is always the longest side, opposite the right angle.",
+      "easyExplanation": "SOHCAHTOA: Sine = Opposite/Hypotenuse, Cosine = Adjacent/Hypotenuse, Tangent = Opposite/Adjacent.",
+      "satImportance": "Medium",
+      "exampleProblem": "In a right triangle, the side opposite angle θ is 6, the adjacent side is 8, and the hypotenuse is 10. Find sin θ and cos θ.",
+      "stepByStepSolution": [
+        "sin θ = opposite/hypotenuse = 6/10 = 3/5",
+        "cos θ = adjacent/hypotenuse = 8/10 = 4/5"
+      ],
+      "commonMistakes": [
+        "Mixing up which side is 'opposite' versus 'adjacent' relative to the angle in question",
+        "Using the wrong ratio for the requested trig function",
+        "Forgetting these ratios ONLY apply to right triangles"
+      ],
+      "memoryTrick": "'SOHCAHTOA' — Some Old Horse Caught Another Horse Taking Oats Away. Each letter maps directly to a ratio.",
+      "practiceQuestion": "In a right triangle, the opposite side is 5, the adjacent side is 12, and the hypotenuse is 13. Find tan θ.",
+      "difficulty": "Medium",
+      "tags": ["trigonometry", "right triangles", "SOHCAHTOA"]
+    },
+    {
+      "id": "pythagorean-identity",
+      "name": "Pythagorean Trig Identity",
+      "equation": "sin²θ + cos²θ = 1",
+      "explanation": "This identity holds true for every angle θ and comes directly from the Pythagorean theorem applied to the unit circle, where the legs are sin θ and cos θ, and the hypotenuse is always 1.",
+      "easyExplanation": "No matter the angle, squaring sin and cos and adding them always gives exactly 1.",
+      "satImportance": "Low",
+      "exampleProblem": "If sin θ = 3/5, find cos θ (assuming θ is in the first quadrant).",
+      "stepByStepSolution": [
+        "Apply identity: (3/5)² + cos²θ = 1",
+        "9/25 + cos²θ = 1",
+        "cos²θ = 1 − 9/25 = 16/25",
+        "cos θ = √(16/25) = 4/5"
+      ],
+      "commonMistakes": [
+        "Forgetting to take the square root at the end and leaving the answer as cos²θ",
+        "Not considering the correct sign of the answer based on which quadrant θ is in",
+        "Confusing this identity with the Pythagorean theorem itself (they're related but not the same equation)"
+      ],
+      "memoryTrick": "'Sin and cos always add to one, squared' — think of it as the unit circle's own Pythagorean theorem.",
+      "practiceQuestion": "If cos θ = 5/13, find sin θ (assuming θ is in the first quadrant).",
+      "difficulty": "Medium",
+      "tags": ["trigonometry", "identities", "unit circle"]
+    },
+    {
+      "id": "weighted-mean",
+      "name": "Weighted Mean",
+      "equation": "Weighted Mean = Σ(wx) / Σw",
+      "explanation": "A weighted mean accounts for the fact that some values matter more than others by multiplying each value by its 'weight' before averaging, rather than treating every value equally.",
+      "easyExplanation": "Multiply each value by how much it counts (its weight), add those up, then divide by the total of all the weights.",
+      "satImportance": "Low",
+      "exampleProblem": "A student scores 80 on a test worth 2 credits and 95 on a test worth 3 credits. Find the weighted mean.",
+      "stepByStepSolution": [
+        "Multiply each score by its weight: (80)(2) = 160, (95)(3) = 285",
+        "Add the weighted scores: 160 + 285 = 445",
+        "Add the weights: 2 + 3 = 5",
+        "Divide: 445 / 5 = 89"
+      ],
+      "commonMistakes": [
+        "Treating it like a regular mean and just averaging the raw scores without weights",
+        "Forgetting to divide by the sum of the weights (not by the number of items)",
+        "Multiplying weights together instead of multiplying each value by its own weight"
+      ],
+      "memoryTrick": "'Weight first, then average' — every value gets scaled by its importance before combining.",
+      "practiceQuestion": "A recipe scores 70 from 4 reviewers and 90 from 6 reviewers. Find the weighted mean rating.",
+      "difficulty": "Medium",
+      "tags": ["statistics", "weighted mean", "averages"]
+    },
+    {
+      "id": "percent-change",
+      "name": "Percent Change",
+      "equation": "Percent Change = ((new − old) / old) × 100%",
+      "explanation": "This measures how much a value has increased or decreased relative to its original amount, expressed as a percentage. A positive result means an increase; a negative result means a decrease.",
+      "easyExplanation": "Subtract old from new, divide by the old value, then multiply by 100 to get a percentage.",
+      "satImportance": "Medium",
+      "exampleProblem": "A shirt's price increased from $40 to $52. Find the percent change.",
+      "stepByStepSolution": [
+        "Apply formula: ((52 − 40) / 40) × 100%",
+        "= (12 / 40) × 100%",
+        "= 0.3 × 100%",
+        "= 30% increase"
+      ],
+      "commonMistakes": [
+        "Dividing by the new value instead of the original (old) value",
+        "Forgetting to multiply by 100 to convert the decimal into a percentage",
+        "Misreading a negative result as a positive increase instead of a decrease"
+      ],
+      "memoryTrick": "'New minus old, over old' — always divide by where you started, not where you ended up.",
+      "practiceQuestion": "A population decreased from 1,200 to 900. Find the percent change.",
+      "difficulty": "Easy",
+      "tags": ["statistics", "percent change", "word problems"]
+    },
+    {
+      "id": "compound-interest",
+      "name": "Compound Interest",
+      "equation": "A = P(1 + r/n)^(nt)",
+      "explanation": "Compound interest grows an initial principal P based on an annual interest rate r, compounded n times per year, over t years. Unlike simple interest, each compounding period earns interest on the previously accumulated interest too.",
+      "easyExplanation": "Start with the principal, repeatedly grow it by a small chunk of the rate, as many times as the compounding frequency times the years.",
+      "satImportance": "Medium",
+      "exampleProblem": "$1,000 is invested at 6% annual interest, compounded quarterly, for 2 years. Find the final amount.",
+      "stepByStepSolution": [
+        "Identify P = 1000, r = 0.06, n = 4 (quarterly), t = 2",
+        "Plug in: A = 1000(1 + 0.06/4)^(4×2)",
+        "= 1000(1.015)⁸",
+        "≈ 1000(1.1265) ≈ $1,126.50"
+      ],
+      "commonMistakes": [
+        "Forgetting to divide the rate by n before adding to 1",
+        "Using t alone as the exponent instead of n times t",
+        "Confusing compounding frequency (n) with the number of years (t)"
+      ],
+      "memoryTrick": "'Divide the rate, multiply the time' — r gets divided by n, and the exponent is n times t.",
+      "practiceQuestion": "$5,000 is invested at 4% annual interest, compounded monthly, for 3 years. Find the final amount.",
+      "difficulty": "Hard",
+      "tags": ["exponential functions", "compound interest", "finance"]
+    },
+    {
+      "id": "range-and-iqr",
+      "name": "Range & Interquartile Range (IQR)",
+      "equation": "Range = max − min,   IQR = Q3 − Q1",
+      "explanation": "Range measures the full spread of a data set using its highest and lowest values, but it's sensitive to outliers. IQR measures the spread of just the middle 50% of the data (between the first quartile Q1 and third quartile Q3), making it more resistant to extreme values.",
+      "easyExplanation": "Range: biggest minus smallest. IQR: subtract the 25th-percentile value from the 75th-percentile value — it ignores the extremes.",
+      "satImportance": "Medium",
+      "exampleProblem": "A data set has Q1 = 12, Q3 = 28, minimum = 4, and maximum = 40. Find the range and IQR.",
+      "stepByStepSolution": [
+        "Range = max − min = 40 − 4 = 36",
+        "IQR = Q3 − Q1 = 28 − 12 = 16"
+      ],
+      "commonMistakes": [
+        "Confusing Q1 and Q3 (Q1 is always the smaller of the two quartile values)",
+        "Using the mean or median in place of the quartiles",
+        "Forgetting that range is affected by outliers, while IQR is not — this matters for interpreting which is the 'better' spread measure"
+      ],
+      "memoryTrick": "'Range is greedy (uses extremes), IQR is picky (uses only the middle half).'",
+      "practiceQuestion": "A data set has Q1 = 50, Q3 = 85, minimum = 20, and maximum = 110. Find the range and IQR.",
+      "difficulty": "Medium",
+      "tags": ["statistics", "data analysis", "range", "IQR"]
+    },
+    {
+      "id": "standard-deviation",
+      "name": "Standard Deviation",
+      "equation": "σ = √( Σ(x − mean)² / n )",
+      "explanation": "Standard deviation measures how spread out data values are from the mean, on average. A small standard deviation means values cluster tightly around the mean; a large one means they're spread widely. The SAT rarely requires full calculation — usually just conceptual comparison between data sets.",
+      "easyExplanation": "It tells you how 'typical' the spread of data is. The SAT usually just wants you to compare which data set is MORE or LESS spread out, not calculate the exact number.",
+      "satImportance": "Low",
+      "exampleProblem": "Data set A has values clustered tightly around 50. Data set B has the same mean of 50, but values ranging widely from 10 to 90. Which has a larger standard deviation?",
+      "stepByStepSolution": [
+        "Compare spread visually: Set A's values stay close to the mean",
+        "Set B's values are spread far from the mean in both directions",
+        "Greater spread from the mean means greater standard deviation",
+        "Conclusion: Data set B has the larger standard deviation"
+      ],
+      "commonMistakes": [
+        "Trying to fully calculate standard deviation by hand when the SAT usually only requires a conceptual comparison",
+        "Confusing standard deviation with range (range only looks at the two extreme values)",
+        "Assuming a higher mean means a higher standard deviation — they measure completely different things"
+      ],
+      "memoryTrick": "'Tight data, small deviation. Spread-out data, big deviation.' Picture how far points sit from the center.",
+      "practiceQuestion": "Two classes have the same average test score, but Class X's scores range from 60-100 while Class Y's range from 78-82. Which class has the smaller standard deviation?",
+      "difficulty": "Medium",
+      "tags": ["statistics", "standard deviation", "data analysis"]
+    },
+    {
+      "id": "two-way-tables",
+      "name": "Two-Way Tables",
+      "equation": "Conditional Probability = (cell value) / (row or column total)",
+      "explanation": "A two-way table organizes data by two categorical variables at once (like gender and favorite subject), with totals for each row, column, and the entire table. SAT questions typically ask for a specific cell's probability relative to its row or column total.",
+      "easyExplanation": "Find the number you want in the table, then divide by whatever total the question is asking 'out of' (a row total, column total, or the grand total).",
+      "satImportance": "Medium",
+      "exampleProblem": "In a two-way table, 30 out of 50 male students prefer math, and 80 students total prefer math. What's the probability a randomly chosen math-preferring student is male?",
+      "stepByStepSolution": [
+        "Identify what's being asked: probability of male, GIVEN the student prefers math",
+        "This means dividing by the math column total, not the full table total",
+        "30 (males who prefer math) / 80 (total who prefer math)",
+        "= 3/8"
+      ],
+      "commonMistakes": [
+        "Dividing by the grand total instead of the relevant row or column total",
+        "Misreading which category the question is conditioning on (e.g., 'given math' vs 'given male')",
+        "Adding numbers from the wrong row or column by misreading the table layout"
+      ],
+      "memoryTrick": "'What's it out of?' — always find the matching total for the specific group the question restricts you to.",
+      "practiceQuestion": "In a two-way table, 45 of 120 students who own a pet also have a sibling, and 70 students total have a sibling. What's the probability a randomly chosen sibling-having student also owns a pet?",
+      "difficulty": "Medium",
+      "tags": ["statistics", "data analysis", "two-way tables", "probability"]
+    },
+    {
+      "id": "scatterplots-and-line-of-best-fit",
+      "name": "Scatterplots & Line of Best Fit",
+      "equation": "ŷ = mx + b  (the regression line approximating the data trend)",
+      "explanation": "A scatterplot shows the relationship between two numerical variables as individual points. A line of best fit is a straight line drawn through the data to approximate its overall trend, used to make predictions. The SAT usually gives you the line's equation directly and asks you to interpret or apply it.",
+      "easyExplanation": "Treat the line of best fit just like a regular linear equation — plug in an x-value to predict a y-value, and interpret the slope as the rate of change shown by the data.",
+      "satImportance": "Medium",
+      "exampleProblem": "A line of best fit for hours studied (x) versus test score (y) is ŷ = 5x + 60. Predict the score for someone who studies 6 hours.",
+      "stepByStepSolution": [
+        "Plug x = 6 into the equation: ŷ = 5(6) + 60",
+        "= 30 + 60",
+        "= 90"
+      ],
+      "commonMistakes": [
+        "Treating the line of best fit as an exact value rather than a prediction/approximation",
+        "Misinterpreting what the slope or y-intercept represents in context (e.g., forgetting slope = rate of change per unit of x)",
+        "Plugging values in incorrectly by mixing up which variable is x and which is y"
+      ],
+      "memoryTrick": "'Best fit is just y = mx + b in a lab coat' — same algebra, just applied to real data trends.",
+      "practiceQuestion": "A line of best fit for advertising spend (x, in hundreds of dollars) versus sales (y, in units) is ŷ = 12x + 200. Predict sales when $800 is spent on advertising.",
+      "difficulty": "Medium",
+      "tags": ["statistics", "data analysis", "scatterplots", "line of best fit"]
+    },
+    {
+      "id": "geometric-sequence",
+      "name": "Geometric Sequence Formula",
+      "equation": "aₙ = a₁ · r⁽ⁿ⁻¹⁾",
+      "explanation": "A geometric sequence multiplies by the same fixed ratio r to get from one term to the next, rather than adding a constant difference like an arithmetic sequence does. This formula finds any term directly using the first term and the common ratio.",
+      "easyExplanation": "Start with the first term, then multiply by the ratio one less time than the term number you want.",
+      "satImportance": "Medium",
+      "exampleProblem": "A geometric sequence starts at 3 with a common ratio of 2. Find the 6th term.",
+      "stepByStepSolution": [
+        "Identify a₁ = 3, r = 2, n = 6",
+        "Apply formula: a₆ = 3 · 2⁽⁶⁻¹⁾",
+        "= 3 · 2⁵",
+        "= 3 · 32 = 96"
+      ],
+      "commonMistakes": [
+        "Using n instead of (n − 1) as the exponent, which adds one extra multiplication",
+        "Confusing geometric sequences (multiply) with arithmetic sequences (add)",
+        "Sign or fraction errors when the common ratio is negative or a fraction"
+      ],
+      "memoryTrick": "'Add means arithmetic, multiply means geometric' — the operation between terms tells you which formula to use.",
+      "practiceQuestion": "A geometric sequence starts at 5 with a common ratio of 3. Find the 5th term.",
+      "difficulty": "Medium",
+      "tags": ["sequences", "geometric sequence", "algebra"]
+    },
+    {
+      "id": "arithmetic-series",
+      "name": "Arithmetic Series Sum",
+      "equation": "S = n/2 · (2a₁ + (n − 1)d)",
+      "explanation": "An arithmetic series is the sum of the terms of an arithmetic sequence. This formula finds that total sum directly using the first term a₁, the common difference d, and the number of terms n, without adding every term individually.",
+      "easyExplanation": "Plug the first term, common difference, and number of terms into the formula — it adds up the whole sequence for you instantly.",
+      "satImportance": "Low",
+      "exampleProblem": "Find the sum of the first 10 terms of an arithmetic sequence with a first term of 4 and a common difference of 3.",
+      "stepByStepSolution": [
+        "Identify n = 10, a₁ = 4, d = 3",
+        "Apply formula: S = 10/2 · (2(4) + (10 − 1)(3))",
+        "= 5 · (8 + 27)",
+        "= 5 · 35 = 175"
+      ],
+      "commonMistakes": [
+        "Using n instead of (n − 1) inside the parentheses",
+        "Forgetting to multiply the first term by 2 inside the formula",
+        "Confusing this with the formula for a single term (aₙ) rather than the sum of all terms"
+      ],
+      "memoryTrick": "'Half the terms, double the start, plus the extra steps' — the formula bundles the average term times the count.",
+      "practiceQuestion": "Find the sum of the first 8 terms of an arithmetic sequence with a first term of 10 and a common difference of −2.",
+      "difficulty": "Hard",
+      "tags": ["sequences", "series", "arithmetic series"]
+    },
+    {
+      "id": "geometric-series",
+      "name": "Geometric Series Sum",
+      "equation": "S = a₁(1 − rⁿ) / (1 − r)",
+      "explanation": "A geometric series is the sum of the terms of a geometric sequence. This formula finds that sum directly using the first term a₁, the common ratio r, and the number of terms n, as long as r ≠ 1.",
+      "easyExplanation": "Plug in the first term, ratio, and number of terms — it totals up the whole geometric sequence without adding term by term.",
+      "satImportance": "Low",
+      "exampleProblem": "Find the sum of the first 5 terms of a geometric sequence with a first term of 2 and a common ratio of 3.",
+      "stepByStepSolution": [
+        "Identify a₁ = 2, r = 3, n = 5",
+        "Apply formula: S = 2(1 − 3⁵) / (1 − 3)",
+        "= 2(1 − 243) / (−2)",
+        "= 2(−242) / (−2) = 242"
+      ],
+      "commonMistakes": [
+        "Forgetting this formula breaks down when r = 1 (division by zero) — a different method is needed in that case",
+        "Sign errors when r is greater than 1, making (1 − rⁿ) negative",
+        "Mixing up the geometric series formula with the geometric sequence (single term) formula"
+      ],
+      "memoryTrick": "'One minus ratio to the n, over one minus ratio' — same r appears twice, top and bottom.",
+      "practiceQuestion": "Find the sum of the first 4 terms of a geometric sequence with a first term of 5 and a common ratio of 2.",
+      "difficulty": "Hard",
+      "tags": ["sequences", "series", "geometric series"]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0F1117;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4F7CFF #181C24;
+}
