@@ -13,9 +13,11 @@ const MASTERY_TEXT = { new: 'New', learning: 'Learning', reviewing: 'Reviewing',
 export default function FlashcardMode({ queue, getMastery, onReview, onFinished }) {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const formula = queue[index];
 
+  if (!queue || queue.length === 0) return null;
+  const formula = queue[index];
   if (!formula) return null;
+
   const mastery = getMastery(formula.id);
 
   const handleReview = (knewIt) => {

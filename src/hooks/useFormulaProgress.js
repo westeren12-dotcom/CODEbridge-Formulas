@@ -46,7 +46,6 @@ export default function useFormulaProgress() {
     setProgress((p) => ({ ...p, [formulaId]: updated }));
   }, [user, progress]);
 
-  // Due-for-review formulas first (weakest box first), then never-studied ones
   const buildQueue = useCallback((formulas) => {
     const today = new Date();
     const due = [];
