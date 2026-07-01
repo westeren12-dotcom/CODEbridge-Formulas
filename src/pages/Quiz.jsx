@@ -114,3 +114,4 @@ export default function Quiz() {
     </div>
   );
 }   
+<QuizMode formulas={pool} timeLimit={20} difficulty={difficulty} onComplete={handleComplete} />

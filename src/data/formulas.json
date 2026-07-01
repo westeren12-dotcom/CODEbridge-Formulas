@@ -1276,6 +1276,292 @@
       "practiceQuestion": "Find the sum of the first 4 terms of a geometric sequence with a first term of 5 and a common ratio of 2.",
       "difficulty": "Hard",
       "tags": ["sequences", "series", "geometric series"]
+    },
+    {
+      "id": "reciprocal-trig-functions",
+      "name": "Reciprocal Trig Functions",
+      "equation": "csc θ = 1/sin θ,  sec θ = 1/cos θ,  cot θ = 1/tan θ",
+      "explanation": "Cosecant, secant, and cotangent are simply the reciprocals of sine, cosine, and tangent. They show up less often than the main three ratios, but the SAT and precalculus courses expect you to convert between them instantly.",
+      "easyExplanation": "Just flip the fraction. Csc is 1 over sin, sec is 1 over cos, cot is 1 over tan.",
+      "satImportance": "Low",
+      "exampleProblem": "If sin θ = 2/5, find csc θ.",
+      "stepByStepSolution": [
+        "Apply the reciprocal relationship: csc θ = 1/sin θ",
+        "csc θ = 1/(2/5)",
+        "= 5/2"
+      ],
+      "commonMistakes": [
+        "Confusing which function is the reciprocal of which (csc goes with sin, sec goes with cos, cot goes with tan — note the mismatched letters)",
+        "Forgetting to flip the fraction completely, including the numerator and denominator",
+        "Mixing up reciprocal functions with inverse trig functions (sin⁻¹), which are NOT the same thing"
+      ],
+      "memoryTrick": "'Csc-Sin, Sec-Cos, Cot-Tan' — the letters don't match up, so memorize the pairing directly rather than assuming by spelling.",
+      "practiceQuestion": "If cos θ = 3/7, find sec θ.",
+      "difficulty": "Easy",
+      "tags": ["trigonometry", "reciprocal functions", "csc sec cot"]
+    },
+    {
+      "id": "tangent-identity",
+      "name": "Tangent Identity",
+      "equation": "tan θ = sin θ / cos θ",
+      "explanation": "Tangent can always be rewritten as the ratio of sine to cosine. This identity is useful for simplifying trig expressions or solving equations that mix tangent with sine and cosine.",
+      "easyExplanation": "Whenever you see tan θ, you can swap it out for sin θ divided by cos θ — works in both directions.",
+      "satImportance": "Low",
+      "exampleProblem": "If sin θ = 4/5 and cos θ = 3/5, find tan θ.",
+      "stepByStepSolution": [
+        "Apply the identity: tan θ = sin θ / cos θ",
+        "tan θ = (4/5) / (3/5)",
+        "= 4/5 × 5/3",
+        "= 4/3"
+      ],
+      "commonMistakes": [
+        "Flipping the ratio and computing cos θ/sin θ instead (that would be cotangent)",
+        "Forgetting this identity only holds when cos θ ≠ 0 (tangent is undefined there)",
+        "Trying to add or subtract sin and cos directly instead of dividing"
+      ],
+      "memoryTrick": "'Tan is sin over cos' — say it out loud, it's literally the definition.",
+      "practiceQuestion": "If sin θ = 5/13 and cos θ = 12/13, find tan θ.",
+      "difficulty": "Easy",
+      "tags": ["trigonometry", "tangent", "identities"]
+    },
+    {
+      "id": "other-pythagorean-identities",
+      "name": "Other Pythagorean Trig Identities",
+      "equation": "1 + tan²θ = sec²θ,   1 + cot²θ = csc²θ",
+      "explanation": "These are two more versions of the Pythagorean identity, derived by dividing sin²θ + cos²θ = 1 by either cos²θ or sin²θ. They let you convert between tangent/secant pairs or cotangent/cosecant pairs without going back to sine and cosine.",
+      "easyExplanation": "Same family as sin² + cos² = 1, just divided through to give you tan/sec and cot/csc versions instead.",
+      "satImportance": "Low",
+      "exampleProblem": "If tan θ = 3/4, find sec²θ.",
+      "stepByStepSolution": [
+        "Apply identity: 1 + tan²θ = sec²θ",
+        "1 + (3/4)² = sec²θ",
+        "1 + 9/16 = sec²θ",
+        "sec²θ = 25/16"
+      ],
+      "commonMistakes": [
+        "Mixing up which identity pairs with tangent (sec) versus cotangent (csc)",
+        "Forgetting the '1 +' part and just squaring tan θ alone",
+        "Trying to take the square root before finishing the addition step"
+      ],
+      "memoryTrick": "'Tan teams with Sec, Cot teams with Csc' — same starting letter pairs up in each identity.",
+      "practiceQuestion": "If cot θ = 5/12, find csc²θ.",
+      "difficulty": "Medium",
+      "tags": ["trigonometry", "identities", "pythagorean identity"]
+    },
+    {
+      "id": "cofunction-identities",
+      "name": "Co-function Identities",
+      "equation": "sin θ = cos(90° − θ),   cos θ = sin(90° − θ),   tan θ = cot(90° − θ)",
+      "explanation": "Co-function identities relate a trig function of an angle to the 'co' version of its complementary angle (the angle that adds up to 90° with it). This comes directly from the fact that in a right triangle, the two non-right angles are complementary, and what's 'opposite' for one angle is 'adjacent' for the other.",
+      "easyExplanation": "Sine of an angle equals cosine of its complement (90° minus the angle), and vice versa.",
+      "satImportance": "Low",
+      "exampleProblem": "If sin 35° = 0.574, find cos 55°.",
+      "stepByStepSolution": [
+        "Recognize 55° = 90° − 35°, so 35° and 55° are complementary",
+        "Apply identity: cos(90° − θ) = sin θ, so cos 55° = sin 35°",
+        "cos 55° = 0.574"
+      ],
+      "commonMistakes": [
+        "Forgetting the two angles must add up to exactly 90° for this identity to apply",
+        "Mixing up which function swaps with which (sin pairs with cos, tan pairs with cot, sec pairs with csc)",
+        "Trying to apply this with angles that don't actually sum to 90°"
+      ],
+      "memoryTrick": "'Co-functions are complementary buddies' — the angle and its co-function partner always add to 90°.",
+      "practiceQuestion": "If cos 20° = 0.940, find sin 70°.",
+      "difficulty": "Medium",
+      "tags": ["trigonometry", "identities", "cofunctions"]
+    },
+    {
+      "id": "law-of-sines",
+      "name": "Law of Sines",
+      "equation": "a/sin A = b/sin B = c/sin C",
+      "explanation": "The Law of Sines relates the sides of any triangle (not just right triangles) to the sines of their opposite angles. It's used when you know an angle and its opposite side, plus one more piece of information, and need to find a missing side or angle.",
+      "easyExplanation": "Each side divided by the sine of its opposite angle gives the same value for every side in the triangle. Set any two of these ratios equal to solve for an unknown.",
+      "satImportance": "Low",
+      "exampleProblem": "In a triangle, angle A = 30°, angle B = 70°, and side a = 8. Find side b.",
+      "stepByStepSolution": [
+        "Set up the ratio: a/sin A = b/sin B",
+        "8/sin 30° = b/sin 70°",
+        "8/0.5 = b/0.940",
+        "16 = b/0.940",
+        "b = 16 × 0.940 ≈ 15.04"
+      ],
+      "commonMistakes": [
+        "Pairing a side with the wrong angle (each side must be matched with the angle directly opposite it)",
+        "Forgetting this only works for non-right triangles where the basic SOHCAHTOA ratios don't apply",
+        "Rounding too early in multi-step calculations, causing accuracy drift"
+      ],
+      "memoryTrick": "'Side over sine of its opposite angle, always equal.' Each side pairs only with the angle across from it.",
+      "practiceQuestion": "In a triangle, angle A = 40°, angle C = 95°, and side a = 10. Find side c.",
+      "difficulty": "Hard",
+      "tags": ["trigonometry", "law of sines", "triangles"]
+    },
+    {
+      "id": "law-of-cosines",
+      "name": "Law of Cosines",
+      "equation": "c² = a² + b² − 2ab·cos C",
+      "explanation": "The Law of Cosines generalizes the Pythagorean theorem to work for any triangle, not just right triangles. It's used when you know two sides and the angle between them (SAS), or all three sides (SSS), and need to find a missing side or angle.",
+      "easyExplanation": "It's the Pythagorean theorem with an extra correction term for triangles that aren't right triangles — that extra term disappears when C = 90° since cos 90° = 0.",
+      "satImportance": "Low",
+      "exampleProblem": "A triangle has sides a = 7, b = 9, and the angle between them C = 60°. Find side c.",
+      "stepByStepSolution": [
+        "Apply formula: c² = 7² + 9² − 2(7)(9)cos 60°",
+        "= 49 + 81 − 126(0.5)",
+        "= 130 − 63",
+        "= 67",
+        "c = √67 ≈ 8.19"
+      ],
+      "commonMistakes": [
+        "Using the wrong angle (C must be the angle between sides a and b, not opposite either one)",
+        "Forgetting to multiply by 2 in the subtracted term",
+        "Confusing this with the Law of Sines when the given information is two sides and an included angle"
+      ],
+      "memoryTrick": "'Pythagorean theorem with a cosine correction' — when C = 90°, the cosine term vanishes and it's just a² + b² = c² again.",
+      "practiceQuestion": "A triangle has sides a = 5, b = 8, and the angle between them C = 45°. Find side c.",
+      "difficulty": "Hard",
+      "tags": ["trigonometry", "law of cosines", "triangles"]
+    },
+    {
+      "id": "triangle-area-with-trig",
+      "name": "Triangle Area Using Trig",
+      "equation": "A = ½ab·sin C",
+      "explanation": "This formula finds the area of any triangle using two sides and the included angle between them, without needing the perpendicular height directly — the sine of the angle effectively supplies it.",
+      "easyExplanation": "Multiply two sides together, multiply by the sine of the angle squeezed between them, then take half.",
+      "satImportance": "Low",
+      "exampleProblem": "A triangle has sides of 10 and 14, with an included angle of 30°. Find its area.",
+      "stepByStepSolution": [
+        "Apply formula: A = ½(10)(14)sin 30°",
+        "= ½(140)(0.5)",
+        "= ½(70)",
+        "= 35"
+      ],
+      "commonMistakes": [
+        "Using an angle that isn't actually between the two given sides (the angle must be the included angle)",
+        "Forgetting the ½ factor at the front of the formula",
+        "Using cosine instead of sine by mistake"
+      ],
+      "memoryTrick": "'Half the sides, times the sine of what's squeezed between them' — sine supplies the 'height' automatically.",
+      "practiceQuestion": "A triangle has sides of 6 and 11, with an included angle of 45°. Find its area.",
+      "difficulty": "Medium",
+      "tags": ["trigonometry", "triangle area", "geometry"]
+    },
+    {
+      "id": "radian-degree-conversion",
+      "name": "Radian–Degree Conversion",
+      "equation": "Degrees × (π/180) = Radians,   Radians × (180/π) = Degrees",
+      "explanation": "Radians and degrees are two different units for measuring angles. A full circle is 360° or equivalently 2π radians, so converting between them just means scaling by the ratio π/180 (or its flip, 180/π).",
+      "easyExplanation": "Going from degrees to radians, multiply by π/180. Going from radians to degrees, multiply by 180/π.",
+      "satImportance": "Low",
+      "exampleProblem": "Convert 150° to radians.",
+      "stepByStepSolution": [
+        "Apply formula: 150 × (π/180)",
+        "= 150π/180",
+        "Simplify the fraction: 150/180 = 5/6",
+        "= 5π/6 radians"
+      ],
+      "commonMistakes": [
+        "Using the wrong direction of the conversion ratio (flipping π/180 and 180/π)",
+        "Forgetting to simplify the resulting fraction",
+        "Mixing up radian answers with decimal degree answers when a question expects an exact form like π/6"
+      ],
+      "memoryTrick": "'Degrees to radians: multiply by pi over one-eighty.' Just remember which unit you're converting INTO determines which way the fraction goes.",
+      "practiceQuestion": "Convert 5π/4 radians to degrees.",
+      "difficulty": "Easy",
+      "tags": ["trigonometry", "radians", "degrees", "angle conversion"]
+    },
+    {
+      "id": "arc-length-radians",
+      "name": "Arc Length (Radian Form)",
+      "equation": "s = rθ",
+      "explanation": "When the central angle θ is measured in radians, arc length is found with this much simpler formula than the degree-based version, since radians are already defined in terms of the radius itself.",
+      "easyExplanation": "Just multiply the radius by the angle in radians — no fractions or 360° needed, as long as θ is in radians.",
+      "satImportance": "Low",
+      "exampleProblem": "A circle has radius 8. Find the arc length for a central angle of π/3 radians.",
+      "stepByStepSolution": [
+        "Apply formula: s = rθ",
+        "s = 8 × (π/3)",
+        "= 8π/3"
+      ],
+      "commonMistakes": [
+        "Using this formula with an angle still in degrees (must convert to radians first)",
+        "Mixing this up with the degree-based arc length formula, which needs the θ/360 fraction",
+        "Forgetting units — arc length comes out in the same length unit as the radius"
+      ],
+      "memoryTrick": "'Radians make it simple: s equals r theta' — no 360 needed once you're in radians.",
+      "practiceQuestion": "A circle has radius 6. Find the arc length for a central angle of 2π/5 radians.",
+      "difficulty": "Medium",
+      "tags": ["trigonometry", "arc length", "radians"]
+    },
+    {
+      "id": "double-angle-formulas",
+      "name": "Double Angle Formulas",
+      "equation": "sin 2θ = 2 sin θ cos θ,   cos 2θ = cos²θ − sin²θ",
+      "explanation": "These formulas let you find the sine or cosine of double an angle directly from the sine and cosine of the original angle, without needing to know 2θ itself.",
+      "easyExplanation": "Double the angle inside, and these formulas tell you exactly how to rewrite it using the original angle's sin and cos.",
+      "satImportance": "Low",
+      "exampleProblem": "If sin θ = 3/5 and cos θ = 4/5, find sin 2θ.",
+      "stepByStepSolution": [
+        "Apply formula: sin 2θ = 2 sin θ cos θ",
+        "= 2(3/5)(4/5)",
+        "= 2(12/25)",
+        "= 24/25"
+      ],
+      "commonMistakes": [
+        "Assuming sin 2θ = 2 sin θ (it does NOT distribute like that — you need both sin AND cos)",
+        "Using the wrong version of the cosine double angle formula (there are three equivalent forms; cos²θ − sin²θ is just one)",
+        "Forgetting to use the values of both sin θ and cos θ together"
+      ],
+      "memoryTrick": "'Sin doubles need a partner' — sin 2θ always needs both sin θ AND cos θ multiplied together, never just one alone.",
+      "practiceQuestion": "If sin θ = 5/13 and cos θ = 12/13, find cos 2θ.",
+      "difficulty": "Hard",
+      "tags": ["trigonometry", "double angle", "identities"]
+    },
+    {
+      "id": "sum-difference-formulas",
+      "name": "Sum & Difference Formulas",
+      "equation": "sin(A ± B) = sin A cos B ± cos A sin B,   cos(A ± B) = cos A cos B ∓ sin A sin B",
+      "explanation": "These formulas let you find the sine or cosine of a sum or difference of two angles using only the sines and cosines of the individual angles, which is especially useful when neither angle is a 'nice' value on its own but their sum or difference is.",
+      "easyExplanation": "Breaking apart sin(A+B) or cos(A+B) follows a fixed pattern — memorize the pattern once and it works for both addition and subtraction (just watch the sign flips).",
+      "satImportance": "Low",
+      "exampleProblem": "Find sin 75° using the sum formula, knowing 75° = 45° + 30°.",
+      "stepByStepSolution": [
+        "Apply formula: sin(45° + 30°) = sin 45° cos 30° + cos 45° sin 30°",
+        "= (√2/2)(√3/2) + (√2/2)(1/2)",
+        "= √6/4 + √2/4",
+        "= (√6 + √2)/4"
+      ],
+      "commonMistakes": [
+        "Forgetting that cos(A+B) flips the sign in the middle (it's MINUS, while sin(A+B) is PLUS)",
+        "Mixing up which terms pair with sin and which pair with cos in the expansion",
+        "Trying to distribute sin or cos across the parentheses like a normal multiplication, which is not how these identities work"
+      ],
+      "memoryTrick": "'Sin keeps the sign, cos flips the sign' — when expanding a sum, sin(A+B) stays plus, but cos(A+B) flips to minus in the middle.",
+      "practiceQuestion": "Find cos 75° using the sum formula, knowing 75° = 45° + 30°.",
+      "difficulty": "Hard",
+      "tags": ["trigonometry", "sum and difference formulas", "identities"]
+    },
+    {
+      "id": "trig-graph-transformations",
+      "name": "Amplitude, Period & Vertical Shift of Trig Functions",
+      "equation": "y = A·sin(Bx − C) + D   (Amplitude = |A|, Period = 2π/|B|, Vertical Shift = D)",
+      "explanation": "In a transformed sine or cosine function, each constant controls a specific feature of the graph: A stretches the height (amplitude), B compresses or stretches the graph horizontally (affecting the period), C shifts the graph left or right (phase shift), and D shifts it up or down.",
+      "easyExplanation": "A controls how tall the wave is, B controls how fast it repeats, C slides it sideways, and D slides it up or down.",
+      "satImportance": "Low",
+      "exampleProblem": "Find the amplitude and period of y = 3 sin(2x) + 1.",
+      "stepByStepSolution": [
+        "Identify A = 3, B = 2, D = 1",
+        "Amplitude = |A| = |3| = 3",
+        "Period = 2π/|B| = 2π/2 = π"
+      ],
+      "commonMistakes": [
+        "Forgetting to take the absolute value of A when finding amplitude (amplitude is always non-negative)",
+        "Using B directly as the period instead of dividing 2π by B",
+        "Confusing the vertical shift D with the amplitude A — D moves the whole wave up/down, A only changes its height"
+      ],
+      "memoryTrick": "'Amplitude is height, period is speed, D is the floor it sits on' — each constant has one clear job.",
+      "practiceQuestion": "Find the amplitude and period of y = 5 cos(4x) − 2.",
+      "difficulty": "Hard",
+      "tags": ["trigonometry", "graphing", "amplitude", "period", "transformations"]
     }
   ]
 }

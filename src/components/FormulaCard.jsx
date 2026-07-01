@@ -1,19 +1,31 @@
 import { motion } from 'framer-motion';
 import BookmarkButton from './BookmarkButton';
 
-export default function FormulaCard({ formula, isBookmarked, onToggleBookmark, onClick }) {
+const MASTERY_DOT = {
+  new: null,
+  learning: 'bg-yellow-400',
+  reviewing: 'bg-primary',
+  mastered: 'bg-accent',
+};
+
+export default function FormulaCard({ formula, isBookmarked, onToggleBookmark, onClick, mastery }) {
   const importanceColor = {
     High: 'bg-accent/15 text-accent',
     Medium: 'bg-primary/15 text-primary',
     Low: 'bg-gray-500/15 text-gray-400',
   }[formula.satImportance] || 'bg-gray-500/15 text-gray-400';
 
+  const dotColor = mastery ? MASTERY_DOT[mastery] : null;
+
   return (
     <motion.div
       whileHover={{ y: -4 }}
       onClick={onClick}
-      className="bg-surface border border-white/5 rounded-2xl p-5 cursor-pointer hover:border-primary/40 transition-colors"
+      className="bg-surface border border-white/5 rounded-2xl p-5 cursor-pointer hover:border-primary/40 transition-colors relative"
     >
+      {dotColor && (
+        <span className={`absolute top-3 right-3 w-2 h-2 rounded-full ${dotColor}`} title={`Mastery: ${mastery}`} />
+      )}
       <div className="flex justify-between items-start mb-3">
         <span className={`text-xs px-2 py-1 rounded-full font-medium ${importanceColor}`}>
           {formula.satImportance} Priority

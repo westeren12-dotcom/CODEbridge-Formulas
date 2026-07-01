@@ -76,11 +76,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 transition-all duration-300 ${
-          scrolled
+        className={`sticky top-0 z-40 transition-all duration-300 ${scrolled
             ? 'bg-darkbg/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20'
             : 'bg-darkbg/60 backdrop-blur-md border-b border-white/5'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           {/* Logo + wordmark */}
@@ -99,9 +98,8 @@ export default function Navbar() {
                 <Link
                   key={to}
                   to={to}
-                  className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(to) ? 'text-white' : 'text-gray-400 hover:text-white'
-                  }`}
+                  className={`relative flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(to) ? 'text-white' : 'text-gray-400 hover:text-white'
+                    }`}
                 >
                   <Icon size={16} />
                   {label}
@@ -203,11 +201,10 @@ export default function Navbar() {
                       </button>
                       <button
                         onClick={handleLogout}
-                        className={`w-full flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${
-                          confirmLogout
+                        className={`w-full flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${confirmLogout
                             ? 'bg-red-500/10 text-red-400 font-medium'
                             : 'text-gray-300 hover:bg-white/5 hover:text-red-400'
-                        }`}
+                          }`}
                       >
                         <LogOut size={15} />
                         {confirmLogout ? 'Click again to confirm' : 'Log out'}
@@ -286,9 +283,8 @@ export default function Navbar() {
                     <Link
                       key={to}
                       to={to}
-                      className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                        isActive(to) ? 'bg-primary/15 text-white' : 'text-gray-400 hover:bg-white/5 hover:text-white'
-                      }`}
+                      className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors ${isActive(to) ? 'bg-primary/15 text-white' : 'text-gray-400 hover:bg-white/5 hover:text-white'
+                        }`}
                     >
                       <Icon size={18} /> {label}
                     </Link>
@@ -314,9 +310,8 @@ export default function Navbar() {
                 {user && (
                   <button
                     onClick={handleLogout}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                      confirmLogout ? 'bg-red-500/10 text-red-400' : 'text-gray-400 hover:bg-white/5 hover:text-red-400'
-                    }`}
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-colors ${confirmLogout ? 'bg-red-500/10 text-red-400' : 'text-gray-400 hover:bg-white/5 hover:text-red-400'
+                      }`}
                   >
                     <LogOut size={18} />
                     {confirmLogout ? 'Tap again to confirm' : 'Log out'}
@@ -330,3 +325,14 @@ export default function Navbar() {
     </>
   );
 }
+
+import { Sun, Moon, LogOut, Menu, X, Flame, Bookmark, LayoutDashboard, Layers, Brain, ChevronDown, Settings, LogIn, Award, Zap } from 'lucide-react';
+// ...
+const NAV_LINKS = [
+  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { to: '/flashcards', label: 'Flashcards', icon: Layers },
+  { to: '/quiz', label: 'Quiz', icon: Brain },
+  { to: '/revision', label: 'Revision', icon: Zap },
+  { to: '/bookmarks', label: 'Bookmarks', icon: Bookmark },
+  { to: '/achievements', label: 'Achievements', icon: Award },
+];
