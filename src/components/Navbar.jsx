@@ -5,7 +5,6 @@ import {
   Sun, Moon, LogOut, Menu, X, Flame, Bookmark,
   LayoutDashboard, Layers, Brain, ChevronDown, Settings, LogIn
 } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { useProgress } from '../context/ProgressContext';
 import Logo from './Logo';
@@ -15,7 +14,10 @@ const NAV_LINKS = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard },
   { to: '/flashcards', label: 'Flashcards', icon: Layers },
   { to: '/quiz', label: 'Quiz', icon: Brain },
+  { to: '/revision', label: 'Revision', icon: Zap },
   { to: '/bookmarks', label: 'Bookmarks', icon: Bookmark },
+  { to: '/progress', label: 'Progress', icon: TrendingUp },
+  { to: '/achievements', label: 'Achievements', icon: Award },
 ];
 
 export default function Navbar() {
@@ -77,8 +79,8 @@ export default function Navbar() {
     <>
       <header
         className={`sticky top-0 z-40 transition-all duration-300 ${scrolled
-            ? 'bg-darkbg/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20'
-            : 'bg-darkbg/60 backdrop-blur-md border-b border-white/5'
+          ? 'bg-darkbg/90 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20'
+          : 'bg-darkbg/60 backdrop-blur-md border-b border-white/5'
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -202,8 +204,8 @@ export default function Navbar() {
                       <button
                         onClick={handleLogout}
                         className={`w-full flex items-center gap-2 px-4 py-2.5 text-sm transition-colors ${confirmLogout
-                            ? 'bg-red-500/10 text-red-400 font-medium'
-                            : 'text-gray-300 hover:bg-white/5 hover:text-red-400'
+                          ? 'bg-red-500/10 text-red-400 font-medium'
+                          : 'text-gray-300 hover:bg-white/5 hover:text-red-400'
                           }`}
                       >
                         <LogOut size={15} />

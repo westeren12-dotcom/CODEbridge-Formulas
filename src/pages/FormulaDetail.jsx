@@ -11,7 +11,19 @@ const IMPORTANCE_STYLE = {
   Low: 'bg-gray-500/15 text-gray-400',
 };
 
-export default function FormulaDetail() {
+function Section({ title, icon: Icon, children, accent, warning }) {
+  const iconColor = warning ? 'text-red-400' : accent ? 'text-accent' : 'text-primary';
+  return (
+    <div className="mb-6">
+      <h3 className="flex items-center gap-2 text-white text-sm font-semibold mb-3">
+        <Icon size={16} className={iconColor} /> {title}
+      </h3>
+      {children}
+    </div>
+  );
+}
+
+export default function FormulaDetail({ preview }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const { bookmarks, toggleBookmark } = useBookmarks();
@@ -21,8 +33,42 @@ export default function FormulaDetail() {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center">
         <p className="text-white text-lg font-semibold mb-2">Formula not found</p>
-        <button onClick={() => navigate('/')} className="text-primary text-sm hover:underline">Back to Dashboard</button>
+        <button onClick={() => navigate('/')} className="text-primary text-sm hover:underline">
+          Back to Dashboard
+        </button>
       </div>
+    );
+  }
+
+  // Public preview mode — shown to non-logged-in users via /formula/:id/preview
+  if (preview) {
+    return (
+      <div className="min-h-screen bg-darkbg">
+        <div className="max-w-2xl mx-auto px-4 py-8">
+          <div className="bg-gradient-to-br from-primary/15 to-secondary/15 border border-primary/20 rounded-3xl p-6 mb-6">
+            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${IMPORTANCE_STYLE[formula.satImportance]}`}>
+              {formula.satImportance} Priority
+            </span>
+            <h1 className="text-white text-2xl font-bold mt-4 mb-3">{formula.name}</h1>
+            <p className="text-primary font-mono text-xl bg-darkbg/40 rounded-xl px-4 py-3 inline-block">
+              {formula.equation}
+            </p>
+          </div>
+          <p className="text-gray-300 mb-8 leading-relaxed">{formula.easyExplanation}</p>
+          <div className="bg-surface border border-white/10 rounded-2xl p-6 text-center">
+            <p className="text-white font-semibold mb-2">
+              See the full explanation, memory tricks, and practice questions
+            </p>
+            <p className="text-gray-500 text-sm mb-4">Free with a CODEbridge Formulas account</p>
+
+            href="/signup"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors"
+            >
+            Get Started Free →
+          </a>
+        </div>
+      </div>
+      </div >
     );
   }
 
@@ -30,7 +76,10 @@ export default function FormulaDetail() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
-      <button onClick={() => navigate(-1)} className="flex items-center gap-1 text-gray-400 hover:text-white text-sm mb-6">
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-1 text-gray-400 hover:text-white text-sm mb-6"
+      >
         <ChevronLeft size={16} /> Back
       </button>
 
@@ -49,17 +98,14 @@ export default function FormulaDetail() {
           </p>
         </div>
 
-        {/* Explanation */}
         <Section title="Explanation" icon={Brain}>
           <p className="text-gray-300 leading-relaxed">{formula.explanation}</p>
         </Section>
 
-        {/* Easy explanation */}
         <Section title="In Plain English" icon={Lightbulb} accent>
           <p className="text-white leading-relaxed">{formula.easyExplanation}</p>
         </Section>
 
-        {/* Example + steps */}
         <Section title="Example Problem" icon={PenLine}>
           <p className="text-gray-300 mb-3">{formula.exampleProblem}</p>
           <ol className="space-y-2">
@@ -74,7 +120,6 @@ export default function FormulaDetail() {
           </ol>
         </Section>
 
-        {/* Common mistakes */}
         <Section title="Common Mistakes" icon={AlertTriangle} warning>
           <ul className="space-y-2">
             {formula.commonMistakes.map((m, i) => (
@@ -85,13 +130,11 @@ export default function FormulaDetail() {
           </ul>
         </Section>
 
-        {/* Memory trick */}
         <div className="bg-accent/10 border border-accent/25 rounded-2xl p-5 mb-6">
           <p className="text-accent text-xs font-semibold uppercase tracking-wide mb-2">Memory Trick</p>
           <p className="text-white text-sm leading-relaxed">{formula.memoryTrick}</p>
         </div>
 
-        {/* Practice question */}
         <div className="bg-surface border border-white/10 rounded-2xl p-5 mb-6">
           <p className="text-gray-400 text-xs font-semibold uppercase tracking-wide mb-2 flex items-center gap-1.5">
             <Layers size={13} /> Practice Question
@@ -107,18 +150,6 @@ export default function FormulaDetail() {
           ))}
         </div>
       </motion.div>
-    </div>
-  );
-}
-
-function Section({ title, icon: Icon, children, accent, warning }) {
-  const iconColor = warning ? 'text-red-400' : accent ? 'text-accent' : 'text-primary';
-  return (
-    <div className="mb-6">
-      <h3 className="flex items-center gap-2 text-white text-sm font-semibold mb-3">
-        <Icon size={16} className={iconColor} /> {title}
-      </h3>
-      {children}
     </div>
   );
 }

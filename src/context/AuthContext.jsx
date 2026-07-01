@@ -39,6 +39,7 @@ export function AuthProvider({ children }) {
         badges: [],
         quizzesTaken: 0,
         quizzesPassed: 0,
+        onboardingComplete: false,
       });
     }
   };
