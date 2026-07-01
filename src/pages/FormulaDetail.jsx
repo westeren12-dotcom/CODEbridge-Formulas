@@ -63,9 +63,9 @@ export default function FormulaDetail({ preview }) {
 
             href="/signup"
             className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors"
-            >
+            
             Get Started Free →
-          </a>
+          
         </div>
       </div>
       </div >
