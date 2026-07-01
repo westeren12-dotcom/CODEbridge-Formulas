@@ -5,7 +5,7 @@ import { useAuth } from './AuthContext';
 
 const ProgressContext = createContext();
 
-const BADGES = [
+export const BADGE_DEFINITIONS = [
   { id: 'first-step', label: 'First Step', description: 'Complete your first quiz', condition: (s) => s.quizzesTaken >= 1 },
   { id: 'streak-3', label: '3-Day Streak', description: 'Study 3 days in a row', condition: (s) => s.streak >= 3 },
   { id: 'streak-7', label: 'Week Warrior', description: 'Study 7 days in a row', condition: (s) => s.streak >= 7 },
@@ -64,13 +64,13 @@ export function ProgressProvider({ children }) {
   };
 
   const checkBadges = async (liveStats) => {
-    const earned = BADGES.filter((b) => b.condition(liveStats)).map((b) => b.id);
+    const earned = BADGE_DEFINITIONS.filter((b) => b.condition(liveStats)).map((b) => b.id);
     const newOnes = earned.filter((id) => !badges.includes(id));
     if (newOnes.length && user) {
       const merged = [...badges, ...newOnes];
       await updateDoc(doc(db, 'users', user.uid), { badges: merged });
       setBadges(merged);
-      return BADGES.filter((b) => newOnes.includes(b.id));
+     return BADGE_DEFINITIONS.filter((b) => newOnes.includes(b.id));
     }
     return [];
   };

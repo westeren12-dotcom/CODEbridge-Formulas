@@ -9,20 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.13.0",
+    "framer-motion": "^11.3.0",
+    "lucide-react": "^0.414.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0",
-    "firebase": "^10.13.0",
-    "framer-motion": "^11.3.0",
-    "zustand": "^4.5.4",
-    "lucide-react": "^0.414.0"
+    "recharts": "^3.9.1",
+    "zustand": "^4.5.4"
   },
   "devDependencies": {
-    "vite": "^5.4.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "tailwindcss": "^3.4.7",
-    "postcss": "^8.4.40",
     "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.40",
+    "tailwindcss": "^3.4.7",
+    "vite": "^5.4.0",
     "vite-plugin-pwa": "^0.20.0"
   }
 }
