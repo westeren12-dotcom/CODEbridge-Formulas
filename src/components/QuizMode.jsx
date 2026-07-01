@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, X, Clock } from 'lucide-react';
+import useKeyboard from '../hooks/useKeyboard';
 
 function shuffle(arr) {
   return [...arr].sort(() => Math.random() - 0.5);
@@ -23,7 +24,7 @@ function buildNextStepQuestion(formula, pool) {
   const options = shuffle([...wrongSteps, correctNext]);
   return {
     type: 'next-step',
-    question: `${formula.name}: after "${formula.stepByStepSolution[stepIndex]}", what's next?`,
+    question: `${formula.name}: after "${formula.stepByStepSolution[stepIndex]}", what comes next?`,
     options,
     answer: correctNext,
     name: formula.name,
@@ -47,16 +48,37 @@ function buildMistakeQuestion(formula, pool) {
   };
 }
 
-function buildQuestions(formulas) {
-  const builders = [buildEquationQuestion, buildNextStepQuestion, buildMistakeQuestion];
+function pickWeightedBuilder(targetDifficulty) {
+  const builders = [
+    { fn: buildEquationQuestion, weight: 1 },
+    { fn: buildNextStepQuestion, weight: 2 },
+    { fn: buildMistakeQuestion, weight: 2 },
+  ];
+  const adjusted = builders.map((b) => {
+    if (targetDifficulty === 'Easy') return { ...b, weight: b.fn === buildEquationQuestion ? 3 : 1 };
+    if (targetDifficulty === 'Hard') return { ...b, weight: b.fn === buildEquationQuestion ? 1 : 3 };
+    return b;
+  });
+  const totalWeight = adjusted.reduce((sum, b) => sum + b.weight, 0);
+  let roll = Math.random() * totalWeight;
+  for (const b of adjusted) {
+    if (roll < b.weight) return b.fn;
+    roll -= b.weight;
+  }
+  return buildEquationQuestion;
+}
+
+function buildQuestions(formulas, difficulty = 'All') {
   return shuffle(formulas).map((formula) => {
-    const builder = builders[Math.floor(Math.random() * builders.length)];
+    const builder = pickWeightedBuilder(difficulty);
     return builder(formula, formulas);
   });
 }
 
-export default function QuizMode({ formulas, timeLimit = 25, onComplete }) {
-  const questions = useMemo(() => buildQuestions(formulas), [formulas]);
+const TYPE_LABEL = { equation: 'Equation Match', 'next-step': 'Next Step', mistake: 'Spot the Mistake' };
+
+export default function QuizMode({ formulas, timeLimit = 25, difficulty = 'All', onComplete }) {
+  const questions = useMemo(() => buildQuestions(formulas, difficulty), [formulas, difficulty]);
   const [qIndex, setQIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [locked, setLocked] = useState(false);
@@ -66,6 +88,13 @@ export default function QuizMode({ formulas, timeLimit = 25, onComplete }) {
 
   const current = questions[qIndex];
   const progress = (qIndex / questions.length) * 100;
+
+  // Keyboard shortcuts: 1-4 keys select answer options
+  useKeyboard(
+    Object.fromEntries(
+      (current?.options || []).map((opt, i) => [`${i + 1}`, () => handleSelect(opt)])
+    )
+  );
 
   useEffect(() => {
     setTimeLeft(timeLimit);
@@ -82,7 +111,7 @@ export default function QuizMode({ formulas, timeLimit = 25, onComplete }) {
 
   useEffect(() => () => clearTimeout(advanceTimeout.current), []);
 
-  const handleSelect = (option) => {
+  function handleSelect(option) {
     if (locked) return;
     setLocked(true);
     setSelected(option);
@@ -99,23 +128,28 @@ export default function QuizMode({ formulas, timeLimit = 25, onComplete }) {
         onComplete?.({ score, total: questions.length, history: newHistory });
       }
     }, 1200);
-  };
-
-  const TYPE_LABEL = { equation: 'Equation', 'next-step': 'Next Step', mistake: 'Common Mistake' };
+  }
 
   return (
     <div className="max-w-lg mx-auto">
       <div className="h-1.5 bg-white/5 rounded-full mb-5 overflow-hidden">
-        <motion.div className="h-full bg-gradient-to-r from-primary to-secondary" animate={{ width: `${progress}%` }} transition={{ duration: 0.4 }} />
+        <motion.div
+          className="h-full bg-gradient-to-r from-primary to-secondary"
+          animate={{ width: `${progress}%` }}
+          transition={{ duration: 0.4 }}
+        />
       </div>
 
-      <div className="flex justify-between items-center text-sm text-gray-400 mb-2">
+      <div className="flex justify-between items-center text-sm text-gray-400 mb-1">
         <span>Question {qIndex + 1} of {questions.length}</span>
         <span className={`flex items-center gap-1 font-medium ${timeLeft <= 5 ? 'text-red-400' : 'text-gray-400'}`}>
           <Clock size={14} /> {timeLeft}s
         </span>
       </div>
-      <span className="text-xs text-gray-500 mb-3 inline-block">{TYPE_LABEL[current.type]}</span>
+
+      <p className="text-xs text-gray-600 mb-3">
+        {TYPE_LABEL[current.type]} &nbsp;·&nbsp; Press 1–{current.options.length} to answer
+      </p>
 
       <AnimatePresence mode="wait">
         <motion.div
@@ -146,7 +180,10 @@ export default function QuizMode({ formulas, timeLimit = 25, onComplete }) {
                     current.type === 'equation' ? 'font-mono' : ''
                   } ${stateClass}`}
                 >
-                  <span>{opt}</span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-gray-600 text-xs font-bold w-4">{i + 1}</span>
+                    <span>{opt}</span>
+                  </div>
                   {locked && isAnswer && <Check size={16} className="text-accent shrink-0 ml-2" />}
                   {locked && isSelected && !isAnswer && <X size={16} className="text-red-400 shrink-0 ml-2" />}
                 </button>
@@ -157,39 +194,4 @@ export default function QuizMode({ formulas, timeLimit = 25, onComplete }) {
       </AnimatePresence>
     </div>
   );
-}   
-const TYPE_DIFFICULTY_WEIGHT = {
-  equation: 1,      // mostly recall
-  'next-step': 2,   // requires understanding the process
-  mistake: 2,       // requires recognizing nuance
-};
-
-function pickWeightedBuilder(targetDifficulty) {
-  const builders = [
-    { fn: buildEquationQuestion, weight: 1 },
-    { fn: buildNextStepQuestion, weight: 2 },
-    { fn: buildMistakeQuestion, weight: 2 },
-  ];
-
-  // Easy quizzes lean toward equation recall; Hard quizzes lean toward next-step/mistake questions
-  const adjusted = builders.map((b) => {
-    if (targetDifficulty === 'Easy') return { ...b, weight: b.fn === buildEquationQuestion ? 3 : 1 };
-    if (targetDifficulty === 'Hard') return { ...b, weight: b.fn === buildEquationQuestion ? 1 : 3 };
-    return b; // Medium / All: balanced
-  });
-
-  const totalWeight = adjusted.reduce((sum, b) => sum + b.weight, 0);
-  let roll = Math.random() * totalWeight;
-  for (const b of adjusted) {
-    if (roll < b.weight) return b.fn;
-    roll -= b.weight;
-  }
-  return buildEquationQuestion;
-}
-
-function buildQuestions(formulas, difficulty = 'All') {
-  return shuffle(formulas).map((formula) => {
-    const builder = pickWeightedBuilder(difficulty);
-    return builder(formula, formulas);
-  });
 }
