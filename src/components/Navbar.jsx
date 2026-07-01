@@ -328,13 +328,3 @@ export default function Navbar() {
   );
 }
 
-import { Sun, Moon, LogOut, Menu, X, Flame, Bookmark, LayoutDashboard, Layers, Brain, ChevronDown, Settings, LogIn, Award, Zap } from 'lucide-react';
-// ...
-const NAV_LINKS = [
-  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { to: '/flashcards', label: 'Flashcards', icon: Layers },
-  { to: '/quiz', label: 'Quiz', icon: Brain },
-  { to: '/revision', label: 'Revision', icon: Zap },
-  { to: '/bookmarks', label: 'Bookmarks', icon: Bookmark },
-  { to: '/achievements', label: 'Achievements', icon: Award },
-];
