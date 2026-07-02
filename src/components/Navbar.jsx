@@ -2,8 +2,21 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
-  Sun, Moon, LogOut, Menu, X, Flame, Bookmark,
-  LayoutDashboard, Layers, Brain, ChevronDown, Settings, LogIn
+  Sun,
+  Moon,
+  LogOut,
+  Menu,
+  X,
+  Flame,
+  Bookmark,
+  LayoutDashboard,
+  Layers,
+  Brain,
+  Zap,
+  ChevronDown,
+  Settings,
+  LogIn,
+
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useProgress } from '../context/ProgressContext';
